@@ -26,7 +26,7 @@ export default function Header() {
                         component='div'
                         sx={{ flexGrow: 1 }}
                     >
-                        News
+                        Flood disaster management
                     </Typography>
                     <Button color='inherit'>Login</Button>
                 </Toolbar>

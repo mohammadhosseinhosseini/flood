@@ -1,0 +1,1503 @@
+{
+    "type": "FeatureCollection",
+    "name": "Hotels",
+    "crs": {
+        "type": "name",
+        "properties": {
+            "name": "urn:ogc:def:crs:OGC:1.3:CRS84"
+        }
+    },
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Park-Lodge \"Am Rohrbusch\"",
+                "STR_NAME": "Am Rohrbusch",
+                "HSNR": 77.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48161.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 400683.0,
+                "HOCHWERT": 5756494.0,
+                "HOMEPAGE": "https:\/\/parklodge.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.55486021457458,
+                    51.950274162307267
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Feldmann",
+                "STR_NAME": "An der Clemenskirche",
+                "HSNR": 14.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405951.0,
+                "HOCHWERT": 5757581.0,
+                "HOMEPAGE": "https:\/\/www.hotel-feldmann.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.631191877974315,
+                    51.960960351125095
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Kaiserhof",
+                "STR_NAME": "Bahnhofstraße",
+                "HSNR": 14.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406153.0,
+                "HOCHWERT": 5757248.0,
+                "HOMEPAGE": "https:\/\/www.kaiserhof-muenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.634221899889963,
+                    51.958001325612642
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Haus Niemann",
+                "STR_NAME": "Bentelerstraße",
+                "HSNR": 4.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48149.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 403355.0,
+                "HOCHWERT": 5758955.0,
+                "HOMEPAGE": "https:\/\/www.haus-niemann.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.593034575748602,
+                    51.972865085227554
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel Conti",
+                "STR_NAME": "Berliner Platz",
+                "HSNR": 2.0,
+                "HSNR_ZUS": "a",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406129.0,
+                "HOCHWERT": 5757147.0,
+                "HOMEPAGE": "https:\/\/hotel-conti-muenster.com\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.633900326918762,
+                    51.957089439453881
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Trip Inn Hotel",
+                "STR_NAME": "Berliner Platz",
+                "HSNR": 26.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406062.0,
+                "HOCHWERT": 5757050.0,
+                "HOMEPAGE": "https:\/\/tripinn-hotels.com\/muenster\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.632952101434338,
+                    51.956206243991957
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Agora",
+                "STR_NAME": "Bismarckallee",
+                "HSNR": 5.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405031.0,
+                "HOCHWERT": 5757022.0,
+                "HOMEPAGE": "https:\/\/www.agora-muenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.617960738911066,
+                    51.955779448640008
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "SeeZeit",
+                "STR_NAME": "Bismarckallee",
+                "HSNR": 47.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404539.0,
+                "HOCHWERT": 5756713.0,
+                "HOMEPAGE": "https:\/\/www.seezeit-muenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.610889008407066,
+                    51.952917797216067
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Jugend Gästehaus Aasee",
+                "STR_NAME": "Bismarckallee",
+                "HSNR": 31.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404746.0,
+                "HOCHWERT": 5756837.0,
+                "HOMEPAGE": "https:\/\/muenster.jugendherberge.de\/jugendherbergen\/muenster-373\/portraet\/?utm_source=gmb&utm_medium=organic&utm_campaign=gmb_traffic"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.613865864321217,
+                    51.95406785066308
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Busche am Dom",
+                "STR_NAME": "Bogenstraße",
+                "HSNR": 10.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405627.0,
+                "HOCHWERT": 5757918.0,
+                "HOMEPAGE": "http:\/\/www.hotel-busche.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.626385177019761,
+                    51.963934551094347
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel Garni",
+                "STR_NAME": "Bremer Platz",
+                "HSNR": 54.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48155.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406350.0,
+                "HOCHWERT": 5757040.0,
+                "HOMEPAGE": "-"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.637144710301129,
+                    51.956164935954106
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Central Hotel",
+                "STR_NAME": "Aegidiistraße",
+                "HSNR": 1.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405471.0,
+                "HOCHWERT": 5757528.0,
+                "HOMEPAGE": "https:\/\/www.central-hotel-muenster.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.624222618353191,
+                    51.960402562501102
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Stadthotel Münster",
+                "STR_NAME": "Aegidiistraße",
+                "HSNR": 21.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405347.0,
+                "HOCHWERT": 5757376.0,
+                "HOMEPAGE": "https:\/\/www.stadthotel-muenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.622460366859907,
+                    51.959015226935286
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Tryp Kongresshotel Münster",
+                "STR_NAME": "Albersloher Weg",
+                "HSNR": 28.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48155.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406392.0,
+                "HOCHWERT": 5756272.0,
+                "HOMEPAGE": "https:\/\/www.melia.com\/de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.637964938799676,
+                    51.949268848843055
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "B&B Hotel  Germany GmbH",
+                "STR_NAME": "Albersloher Weg",
+                "HSNR": 9.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48155.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406289.0,
+                "HOCHWERT": 5756556.0,
+                "HOMEPAGE": "https:\/\/www.hotel-bb.com\/de\/hotel\/muenster-hafen"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.63638926746273,
+                    51.951804235147797
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel am Wasserturm",
+                "STR_NAME": "Alexianerweg",
+                "HSNR": 9.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48163.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 401071.0,
+                "HOCHWERT": 5748405.0,
+                "HOMEPAGE": "https:\/\/hotel-am-wasserturm.alexianer.de\/startseite\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.562827439152542,
+                    51.877637314635344
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "ibis budget Münster City",
+                "STR_NAME": "Herwarthstraße",
+                "HSNR": 8.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406015.0,
+                "HOCHWERT": 5756996.0,
+                "HOMEPAGE": "https:\/\/all.accor.com\/hotel\/A220\/index.en.shtml"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.632283108593561,
+                    51.955712925434582
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Martinihof",
+                "STR_NAME": "Hörsterstraße",
+                "HSNR": 25.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406038.0,
+                "HOCHWERT": 5758043.0,
+                "HOMEPAGE": "https:\/\/www.martinihof.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.632331302402873,
+                    51.96512772558745
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Villa Kunterbunt",
+                "STR_NAME": "Hohe Geest",
+                "HSNR": 129.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406105.0,
+                "HOCHWERT": 5752580.0,
+                "HOMEPAGE": "https:\/\/buntevillamuenster.base7booking.com\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.634797861989354,
+                    51.916034912568783
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel-Restaurant Münnich",
+                "STR_NAME": "Heeremansweg",
+                "HSNR": 11.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48167.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 407675.0,
+                "HOCHWERT": 5753900.0,
+                "HOMEPAGE": "https:\/\/www.hotel-muennich.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.657264301193436,
+                    51.928162378199964
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel zur Davert",
+                "STR_NAME": "Davertstraße",
+                "HSNR": 40.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48163.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 403999.0,
+                "HOCHWERT": 5749063.0,
+                "HOMEPAGE": "https:\/\/www.hotel-zur-davert.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.605166538842563,
+                    51.884063487056466
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Parkhotel Hohenfeld",
+                "STR_NAME": "Dingbängerweg",
+                "HSNR": 400.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48161.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 401057.0,
+                "HOCHWERT": 5756394.0,
+                "HOMEPAGE": "https:\/\/www.hotel-muenster-hohenfeld.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.560329133677947,
+                    51.949441999304
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Zum Ausspann",
+                "STR_NAME": "Dülmener Straße",
+                "HSNR": 20.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48163.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 398494.0,
+                "HOCHWERT": 5753739.0,
+                "HOMEPAGE": "http:\/\/www.hotel-zum-ausspann.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.523832925707085,
+                    51.925116864583508
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Mauritzhof",
+                "STR_NAME": "Eisenbahnstraße",
+                "HSNR": 17.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406215.0,
+                "HOCHWERT": 5757627.0,
+                "HOMEPAGE": "https:\/\/www.mauritzhof.de\/de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.635020446791517,
+                    51.961418415139839
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "ibis",
+                "STR_NAME": "Engelstraße",
+                "HSNR": 53.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405922.0,
+                "HOCHWERT": 5756967.0,
+                "HOMEPAGE": "https:\/\/all.accor.com\/hotel\/2206\/index.de.shtml#origin=ibis"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.630938083878842,
+                    51.955436534497977
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Atlantic Hotel",
+                "STR_NAME": "Engelstraße",
+                "HSNR": 39.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405970.0,
+                "HOCHWERT": 5757068.0,
+                "HOMEPAGE": "https:\/\/www.atlantic-hotels.de\/hotel-muenster\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.631608742718072,
+                    51.956352487267552
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Pension Haselmann",
+                "STR_NAME": "Flaßkamp",
+                "HSNR": 41.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48163.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 401828.0,
+                "HOCHWERT": 5754061.0,
+                "HOMEPAGE": "http:\/\/www.pension-haselmann.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.572209757214818,
+                    51.928609011558535
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Cityhotel Amadeus",
+                "STR_NAME": "Friedrich-Ebert-Straße",
+                "HSNR": 55.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48153.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405987.0,
+                "HOCHWERT": 5756346.0,
+                "HOMEPAGE": "http:\/\/www.cityhotel-muenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.632053591480702,
+                    51.949865689699749
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "DJK Zentrum",
+                "STR_NAME": "Grevener Straße",
+                "HSNR": 125.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48159.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404529.0,
+                "HOCHWERT": 5759602.0,
+                "HOMEPAGE": "https:\/\/www.djk-zentrum.de\/gaestehaus\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.609940295984022,
+                    51.978883464053169
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Tom & Polly",
+                "STR_NAME": "Hammer Straße",
+                "HSNR": 67.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48153.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405483.0,
+                "HOCHWERT": 5756307.0,
+                "HOMEPAGE": "http:\/\/www.tomundpolly.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.624733086334435,
+                    51.949429723806809
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel Hof zur Linde",
+                "STR_NAME": "Handorfer Werseufer",
+                "HSNR": 1.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48157.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 410679.0,
+                "HOCHWERT": 5760817.0,
+                "HOMEPAGE": "https:\/\/www.hof-zur-linde.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.699142213804544,
+                    51.990827391890264
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Adler Hotel",
+                "STR_NAME": "Johann-Krane-Weg",
+                "HSNR": 24.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48149.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 403726.0,
+                "HOCHWERT": 5759321.0,
+                "HOMEPAGE": "https:\/\/www.adlerhotelmuenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.598331204184873,
+                    51.976219197530796
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Europa",
+                "STR_NAME": "Kaiser-Wilhelm-Ring",
+                "HSNR": 26.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48145.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 407021.0,
+                "HOCHWERT": 5758106.0,
+                "HOMEPAGE": "https:\/\/hotel-conti-muenster.com\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.646618013424746,
+                    51.965859284324893
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Parkhotel Wienburg",
+                "STR_NAME": "Kanalstraße",
+                "HSNR": 237.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48147.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405576.0,
+                "HOCHWERT": 5760238.0,
+                "HOMEPAGE": "https:\/\/wienburg.business.site\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.625004812673736,
+                    51.984778997048679
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Mövenpick",
+                "STR_NAME": "Kardinal-von-Galen-Ring",
+                "HSNR": 65.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48149.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404163.0,
+                "HOCHWERT": 5756984.0,
+                "HOMEPAGE": "https:\/\/www.movenpick.com\/de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.605343767924546,
+                    51.955288977611303
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Ambiente",
+                "STR_NAME": "Marktallee",
+                "HSNR": 44.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406740.0,
+                "HOCHWERT": 5751225.0,
+                "HOMEPAGE": "https:\/\/hotel-ambiente-muenster.de\/startseite.html"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.644394569305111,
+                    51.903962095235507
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Haus vom Guten Hirten",
+                "STR_NAME": "Mauritz-Lindenweg",
+                "HSNR": 61.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48145.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 407712.0,
+                "HOCHWERT": 5757676.0,
+                "HOMEPAGE": "https:\/\/hotel-guter-hirte.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.656788616224261,
+                    51.962109360375699
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Lohmann",
+                "STR_NAME": "Mecklenbecker Straße",
+                "HSNR": 347.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48163.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 402273.0,
+                "HOCHWERT": 5754622.0,
+                "HOMEPAGE": "https:\/\/hotel-lohmann.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.578520234061169,
+                    51.933729750522254
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Garni Klostermann",
+                "STR_NAME": "Münsterstraße",
+                "HSNR": 25.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48167.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 412501.0,
+                "HOCHWERT": 5752664.0,
+                "HOMEPAGE": "http:\/\/www.hotel-klostermann.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.727746562779097,
+                    51.917831692012101
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "International am Theater",
+                "STR_NAME": "Neubrückenstraße",
+                "HSNR": 12.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405767.0,
+                "HOCHWERT": 5758081.0,
+                "HOMEPAGE": "https:\/\/www.hotel-international-am-theater.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.628377540003315,
+                    51.965423414235502
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Nordstern",
+                "STR_NAME": "Hoyastraße",
+                "HSNR": 3.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48147.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405391.0,
+                "HOCHWERT": 5758632.0,
+                "HOMEPAGE": "https:\/\/nordstern-hostel.de\/de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.622754489971251,
+                    51.970312162762447
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hubert Hostel",
+                "STR_NAME": "Hubertistraße",
+                "HSNR": 14.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48155.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 407206.0,
+                "HOCHWERT": 5756735.0,
+                "HOMEPAGE": "https:\/\/hubertshaus.wordpress.com\/tag\/die-neue-kneipe-hubert-kommt\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.649680389244321,
+                    51.953566935393972
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel Jellentrup",
+                "STR_NAME": "Hüfferstraße",
+                "HSNR": 52.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48149.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404164.0,
+                "HOCHWERT": 5757616.0,
+                "HOMEPAGE": "https:\/\/hotel-jellentrup.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.605182005660087,
+                    51.960969791256083
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Haus Hüerländer",
+                "STR_NAME": "Twerenfeldweg",
+                "HSNR": 4.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48161.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 400379.0,
+                "HOCHWERT": 5760113.0,
+                "HOMEPAGE": "https:\/\/hotel-hueerlaender.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.549388329734454,
+                    51.982747831165405
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel Hüerländer",
+                "STR_NAME": "Twerenfeldweg",
+                "HSNR": 4.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48161.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 400400.0,
+                "HOCHWERT": 5760109.0,
+                "HOMEPAGE": "https:\/\/hotel-hueerlaender.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.549695172572117,
+                    51.982715644000606
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel Galactica",
+                "STR_NAME": "Überwasserstraße",
+                "HSNR": 3.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405225.0,
+                "HOCHWERT": 5758073.0,
+                "HOMEPAGE": "http:\/\/www.ueberwasserhof.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.620493050807004,
+                    51.965259366210226
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "H.ostels",
+                "STR_NAME": "Verspoel",
+                "HSNR": 1.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405718.0,
+                "HOCHWERT": 5757236.0,
+                "HOMEPAGE": "https:\/\/www.h-hotels.com\/de\/hostels\/hotels\/hostel-muenster"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.627896490371101,
+                    51.957819877020484
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Novotel Münster City",
+                "STR_NAME": "Von-Steuben-Straße",
+                "HSNR": 4.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406004.0,
+                "HOCHWERT": 5756961.0,
+                "HOMEPAGE": "https:\/\/all.accor.com\/hotel\/A219\/index.en.shtml"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.632132655504255,
+                    51.955396470044903
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Landgasthof Pleister Mühle",
+                "STR_NAME": "Pleistermühlenweg",
+                "HSNR": 196.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48157.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 410810.0,
+                "HOCHWERT": 5757820.0,
+                "HOMEPAGE": "https:\/\/www.pleistermuehle.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.701828525027079,
+                    51.963909364750705
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Johanniter Gästehaus",
+                "STR_NAME": "Weißenburgstraße",
+                "HSNR": 60.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405098.0,
+                "HOCHWERT": 5755366.0,
+                "HOMEPAGE": "https:\/\/www.johanniter.de\/bildungseinrichtungen\/johanniter-akademie\/johanniter-akademie-nordrhein-westfalen\/johanniter-gaestehaus\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.619392667237615,
+                    51.940906056054089
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "DRK",
+                "STR_NAME": "Sperlichstraße",
+                "HSNR": 27.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404540.0,
+                "HOCHWERT": 5756035.0,
+                "HOMEPAGE": "https:\/\/www.drk-bildungsinstitut.de\/tagungshotel\/spalte-1\/tagungshotel.html"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.611091865644569,
+                    51.946823839740986
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Schloss Wilkinhege",
+                "STR_NAME": "Steinfurter Straße",
+                "HSNR": 374.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48159.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 402846.0,
+                "HOCHWERT": 5760632.0,
+                "HOMEPAGE": "https:\/\/www.schloss-wilkinghege.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.585152067698179,
+                    51.987849626184172
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hotel zur Prinzenbrücke \/ Pinte am Pani",
+                "STR_NAME": "Osttor",
+                "HSNR": 16.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 407634.0,
+                "HOCHWERT": 5751405.0,
+                "HOMEPAGE": "https:\/\/hotel-zur-prinzenbruecke.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.657337423085914,
+                    51.905728984774221
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Brintrup",
+                "STR_NAME": "Roxeler Straße",
+                "HSNR": 579.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48161.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 399289.0,
+                "HOCHWERT": 5756992.0,
+                "HOMEPAGE": "https:\/\/www.hotel-brintrup.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.534437603814289,
+                    51.954499569669075
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Bakenhof",
+                "STR_NAME": "Roxeler Straße",
+                "HSNR": 376.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48161.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 401984.0,
+                "HOCHWERT": 5757345.0,
+                "HOMEPAGE": "https:\/\/www.bakenhof.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.573541648263106,
+                    51.958153943101699
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "pensioni",
+                "STR_NAME": "Saarbrücker Straße",
+                "HSNR": 54.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405095.0,
+                "HOCHWERT": 5754923.0,
+                "HOMEPAGE": "https:\/\/www.pensioni.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.619471285114954,
+                    51.936923665515032
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "H4 Hotel",
+                "STR_NAME": "Stubengasse",
+                "HSNR": 33.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405805.0,
+                "HOCHWERT": 5757406.0,
+                "HOMEPAGE": "https:\/\/www.h-hotels.com\/de\/h4\/hotels\/h4-hotel-muenster"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.629115611255684,
+                    51.959362657488072
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Keßler\"s Landhaus",
+                "STR_NAME": "Raringheide",
+                "HSNR": 226.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48163.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406091.0,
+                "HOCHWERT": 5748671.0,
+                "HOMEPAGE": "http:\/\/www.kessler-landhaus.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.635659245933905,
+                    51.880896266715865
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Factory",
+                "STR_NAME": "An der Germania Brauerei",
+                "HSNR": 5.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48159.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 404586.0,
+                "HOCHWERT": 5759441.0,
+                "HOMEPAGE": "https:\/\/www.factoryhotel-muenster.de\/de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.610814722167889,
+                    51.977446131243518
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Rossi\"s Bed & Breakfast",
+                "STR_NAME": "Weseler Straße",
+                "HSNR": 63.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48151.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405139.0,
+                "HOCHWERT": 5756691.0,
+                "HOMEPAGE": "http:\/\/www.bedandbreakfastmuenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.619623298872181,
+                    51.952822716362853
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Hiltruper Hof",
+                "STR_NAME": "Westfalenstraße",
+                "HSNR": 148.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406144.0,
+                "HOCHWERT": 5751374.0,
+                "HOMEPAGE": "https:\/\/www.hiltruper-hof.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.635693316314564,
+                    51.905201303015012
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Pension Asche",
+                "STR_NAME": "Westfalenstraße",
+                "HSNR": 144.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406099.0,
+                "HOCHWERT": 5751433.0,
+                "HOMEPAGE": "https:\/\/www.pension-asche.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.635023311419409,
+                    51.905724044344268
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Eichstädt\"s Bed & Breakfast",
+                "STR_NAME": "Westfalenstraße",
+                "HSNR": 88.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405750.0,
+                "HOCHWERT": 5752039.0,
+                "HOMEPAGE": "https:\/\/www.eichstaedts-muenster.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.629785913775605,
+                    51.911112155426402
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "conRad",
+                "STR_NAME": "Wilkinghege",
+                "HSNR": 57.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48159.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 403132.0,
+                "HOCHWERT": 5760718.0,
+                "HOMEPAGE": "https:\/\/conrad-dasgaestehaus.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.589291409465825,
+                    51.988672565756609
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Windthorst",
+                "STR_NAME": "Windthorststraße",
+                "HSNR": 19.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 405991.0,
+                "HOCHWERT": 5757168.0,
+                "HOMEPAGE": "https:\/\/www.hotel-windthorst.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.631886892155297,
+                    51.957254883791045
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Horstmann",
+                "STR_NAME": "Windthorststraße",
+                "HSNR": 12.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48143.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406060.0,
+                "HOCHWERT": 5757162.0,
+                "HOMEPAGE": "https:\/\/www.hotel-horstmann.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.632892380839036,
+                    51.95721261402182
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Sleep-Station",
+                "STR_NAME": "Wolbecker Straße",
+                "HSNR": 1.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48155.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406270.0,
+                "HOCHWERT": 5757423.0,
+                "HOMEPAGE": "https:\/\/www.sleep-station.de"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.635876358115288,
+                    51.959594042494729
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Flowers Hotels",
+                "STR_NAME": "Wolbecker Straße",
+                "HSNR": 16.0,
+                "HSNR_ZUS": "a",
+                "PLZ": 48155.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 406379.0,
+                "HOCHWERT": 5757307.0,
+                "HOMEPAGE": "https:\/\/flowershotels.de\/unser-haus\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.637493847176345,
+                    51.958569743136174
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Landhotel zur Mühle",
+                "STR_NAME": "Wolbecker Windmühle",
+                "HSNR": 15.0,
+                "HSNR_ZUS": "b",
+                "PLZ": 48167.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 411919.0,
+                "HOCHWERT": 5753775.0,
+                "HOMEPAGE": "https:\/\/www.landhotel-muenster.de\/STARTSEITE\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.719002164455584,
+                    51.927726524020841
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Best Western Premier Krautkrämer",
+                "STR_NAME": "Zum Hiltruper See",
+                "HSNR": 173.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48165.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 407398.0,
+                "HOCHWERT": 5749523.0,
+                "HOMEPAGE": "https:\/\/www.bestwestern.de\/hotels\/Muenster-Hiltrup\/Best-Western-Premier-Seehotel-Krautkraemer"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.654413388262338,
+                    51.888773196923069
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "NAME": "Ringhotel Landhaus Eggert",
+                "STR_NAME": "Zur Haskenau",
+                "HSNR": 81.0,
+                "HSNR_ZUS": "",
+                "PLZ": 48157.0,
+                "ORT": "Münster",
+                "RECHTSWERT": 410117.0,
+                "HOCHWERT": 5763651.0,
+                "HOMEPAGE": "https:\/\/www.landhaus-eggert.de\/"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.690216170511323,
+                    52.016210425121521
+                ]
+            }
+        }
+    ]
+}

@@ -22,7 +22,7 @@ function LocationGeoJson({ data, icon }) {
                 iconUrl: icon,
                 iconSize: [40, 40],
                 iconAnchor: [20, 20],
-                popupAnchor: [1, -34],
+                popupAnchor: [1, -20],
                 shadowSize: [45, 45],
                 shadowAnchor: [15, 25],
                 shadowUrl: require('leaflet/dist/images/marker-shadow.png'),

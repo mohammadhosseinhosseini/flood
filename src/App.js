@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import ShelterFilters from './components/filters/ShelterFilters'
 import Header from './components/Layers/Header'
 import Map from './components/map/Map'
+import YearSlider from './components/map/YearSlider'
 
 function App() {
     const [showHotels, setShowHotels] = useState(true)
     const [showHospitals, setShowHospitals] = useState(true)
+    const [year, setYear] = useState(parseInt(new Date().getFullYear()))
 
     const changeShowHotels = (checked) => {
         setShowHotels(checked)
@@ -33,6 +35,10 @@ function App() {
                             showHotels={showHotels}
                             showHospitals={showHospitals}
                         />
+                        <div className='mt-4'>
+                            <h3 className='m-0'>Year: {year}</h3>
+                            <YearSlider year={year} setYear={setYear} />
+                        </div>
                     </div>
                 </div>
             </div>

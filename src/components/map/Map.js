@@ -24,7 +24,7 @@ function Map({ showHotels, showHospitals }) {
                 zoom={12}
                 scrollWheelZoom={false}
                 style={{
-                    height: '90vh',
+                    height: '75vh',
                     width: '100%',
                     backgroundColor: 'gray',
                     marginTop: '8px',

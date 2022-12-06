@@ -3,6 +3,8 @@ import FilterSwitch from './FilterSwitch'
 import HotelTwoToneIcon from '@mui/icons-material/HotelTwoTone'
 import LocalHospitalTwoToneIcon from '@mui/icons-material/LocalHospitalTwoTone'
 import { Button } from '@mui/material'
+import RemoveRedEyeTwoToneIcon from '@mui/icons-material/RemoveRedEyeTwoTone'
+import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
 
 function ShelterFilters({
     showHotels,
@@ -23,6 +25,7 @@ function ShelterFilters({
                             changeShowHotels(false)
                             changeShowHospitals(false)
                         }}
+                        startIcon={<VisibilityOffTwoToneIcon />}
                     >
                         Hide All
                     </Button>
@@ -36,6 +39,7 @@ function ShelterFilters({
                             changeShowHotels(true)
                             changeShowHospitals(true)
                         }}
+                        startIcon={<RemoveRedEyeTwoToneIcon />}
                     >
                         Show All
                     </Button>

@@ -26,11 +26,17 @@ function FloodFilter({
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={!showFloodLow}
+                        disabled={
+                            !showFloodLow &&
+                            !showFloodMedium &&
+                            !showFloodHigh &&
+                            !showPopulation
+                        }
                         onClick={() => {
                             changeShowFloodLow(false)
-                            // changeShowFloodMedium(false)
-                            // changeShowFloodHigh(false)
+                            changeShowFloodMedium(false)
+                            changeShowFloodHigh(false)
+                            changeShowPopulation(false)
                         }}
                         startIcon={<VisibilityOffTwoToneIcon />}
                     >
@@ -41,11 +47,17 @@ function FloodFilter({
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={showFloodLow}
+                        disabled={
+                            showFloodLow &&
+                            showFloodMedium &&
+                            showFloodHigh &&
+                            showPopulation
+                        }
                         onClick={() => {
                             changeShowFloodLow(true)
-                            // changeShowFloodMedium(true)
-                            // changeShowFloodHigh(true)
+                            changeShowFloodMedium(true)
+                            changeShowFloodHigh(true)
+                            changeShowPopulation(true)
                         }}
                         startIcon={<RemoveRedEyeTwoToneIcon />}
                     >
@@ -55,9 +67,21 @@ function FloodFilter({
             </div>
             <div className='mx-3'>
                 <FilterSwitch
-                    label='Flood Hazard Area'
+                    label='Flood Hazard Area (Low)'
                     checked={showFloodLow}
                     onChange={changeShowFloodLow}
+                    icon={<FloodTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='Flood Hazard Area (Medium)'
+                    checked={showFloodMedium}
+                    onChange={changeShowFloodMedium}
+                    icon={<FloodTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='Flood Hazard Area (High)'
+                    checked={showFloodHigh}
+                    onChange={changeShowFloodHigh}
                     icon={<FloodTwoToneIcon />}
                 />
                 <FilterSwitch

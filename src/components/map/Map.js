@@ -57,8 +57,8 @@ function Map({
                 {showLibraries && <Libraries />}
 
                 {showFloodLow && <FloodLow />}
-                {showFloodLow && <FloodMedium />}
-                {showFloodLow && <FloodHigh />}
+                {showFloodMedium && <FloodMedium />}
+                {showFloodHigh && <FloodHigh />}
                 {showPopulation && <Population />}
 
                 <UserPosition />

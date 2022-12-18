@@ -19,6 +19,7 @@ import FloodHigh from './flood/FloodHigh'
 import Population from './population/Population'
 import Schools from './Shelters/Schools'
 import UserPosition from './position/UserPosition'
+import Libraries from './Shelters/Libraries'
 
 const center = [51.9607, 7.6261]
 
@@ -30,6 +31,7 @@ function Map({
     showFloodHigh,
     showPopulation,
     showSchools,
+    showLibraries,
 }) {
     return (
         <div>
@@ -52,6 +54,7 @@ function Map({
                 {showHotels && <Hotels />}
                 {showHospitals && <Hospitals />}
                 {showSchools && <Schools />}
+                {showLibraries && <Libraries />}
 
                 {showFloodLow && <FloodLow />}
                 {showFloodLow && <FloodMedium />}

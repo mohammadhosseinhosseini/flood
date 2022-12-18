@@ -6,6 +6,7 @@ import { Button } from '@mui/material'
 import RemoveRedEyeTwoToneIcon from '@mui/icons-material/RemoveRedEyeTwoTone'
 import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
 import SchoolTwoToneIcon from '@mui/icons-material/SchoolTwoTone'
+import ClassTwoToneIcon from '@mui/icons-material/ClassTwoTone'
 
 function ShelterFilters({
     showHotels,
@@ -14,6 +15,8 @@ function ShelterFilters({
     changeShowHospitals,
     showSchools,
     changeShowSchools,
+    showLibraries,
+    changeShowLibraries,
 }) {
     return (
         <div>
@@ -56,6 +59,12 @@ function ShelterFilters({
                     checked={showSchools}
                     onChange={changeShowSchools}
                     icon={<SchoolTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='Libraries'
+                    checked={showLibraries}
+                    onChange={changeShowLibraries}
+                    icon={<ClassTwoToneIcon />}
                 />
                 <FilterSwitch
                     label='Hotels'

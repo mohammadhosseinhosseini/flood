@@ -39,6 +39,10 @@ function App() {
         setShowSchools(checked)
     }
 
+    const changeShowPopulation = (checked) => {
+        setShowPopulation(checked)
+    }
+
     return (
         <>
             <Header />
@@ -52,6 +56,8 @@ function App() {
                             changeShowFloodMedium={changeShowFloodMedium}
                             showFloodHigh={showFloodHigh}
                             changeShowFloodHigh={changeShowFloodHigh}
+                            showPopulation={showPopulation}
+                            changeShowPopulation={changeShowPopulation}
                         />
 
                         <ShelterFilters

@@ -6,6 +6,7 @@ import { Button } from '@mui/material'
 import RemoveRedEyeTwoToneIcon from '@mui/icons-material/RemoveRedEyeTwoTone'
 import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
 import FloodTwoToneIcon from '@mui/icons-material/FloodTwoTone'
+import GroupsTwoToneIcon from '@mui/icons-material/GroupsTwoTone'
 
 function FloodFilter({
     showFloodLow,
@@ -14,22 +15,22 @@ function FloodFilter({
     changeShowFloodMedium,
     showFloodHigh,
     changeShowFloodHigh,
+    showPopulation,
+    changeShowPopulation,
 }) {
     return (
         <div>
-            <h4>Shelter Filters</h4>
+            <h4>Filters</h4>
             <div className='mb-3 row'>
                 <div className='col-6'>
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={
-                            !showFloodLow && !showFloodMedium && !showFloodHigh
-                        }
+                        disabled={!showFloodLow}
                         onClick={() => {
                             changeShowFloodLow(false)
-                            changeShowFloodMedium(false)
-                            changeShowFloodHigh(false)
+                            // changeShowFloodMedium(false)
+                            // changeShowFloodHigh(false)
                         }}
                         startIcon={<VisibilityOffTwoToneIcon />}
                     >
@@ -40,13 +41,11 @@ function FloodFilter({
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={
-                            showFloodLow && showFloodMedium && showFloodHigh
-                        }
+                        disabled={showFloodLow}
                         onClick={() => {
                             changeShowFloodLow(true)
-                            changeShowFloodMedium(true)
-                            changeShowFloodHigh(true)
+                            // changeShowFloodMedium(true)
+                            // changeShowFloodHigh(true)
                         }}
                         startIcon={<RemoveRedEyeTwoToneIcon />}
                     >
@@ -60,6 +59,12 @@ function FloodFilter({
                     checked={showFloodLow}
                     onChange={changeShowFloodLow}
                     icon={<FloodTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='Population'
+                    checked={showPopulation}
+                    onChange={changeShowPopulation}
+                    icon={<GroupsTwoToneIcon />}
                 />
             </div>
         </div>

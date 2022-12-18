@@ -1,0 +1,124 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "City Library in Coerde",
+        "TEL": "0251/492-4266",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei/buecherei-coerde.html",
+        "Extra_Service": "Barrier-free access to toilets; PCs with Internet access, printers; WLAN for customers; copiers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.648835664455216,
+          51.99327314036362
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "City Library Münster",
+        "TEL": "0251/492-4242",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei",
+        "Extra_Service": "Barrier-free access to toilets; PCs with Internet access, printers; WiFi; copiers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.630779961421191,
+          51.96301464529431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "City Library Aaseemarkt",
+        "TEL": "0251/492-4211",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei/buecherei-im-aaseemarkt.html",
+        "Extra_Service": "PCs with Internet access, printers; WiFi for customers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.608413205234013,
+          51.94592900463359
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "City Library Hansaplatz",
+        "TEL": "0251/492-4255",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei/buecherei-am-hansaplatz.html",
+        "Extra_Service": "PC with Internet access, printer"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.64561348959058,
+          51.95572316815358
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "City Library Kinderhaus",
+        "TEL": "0251/492-4277",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei/buecherei-in-kinderhaus.html",
+        "Extra_Service": "PCs with Internet access, printers; WiFi for customers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.60365056805383,
+          51.99572228555971
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "Library St. Michael",
+        "TEL": "0251/492-4233",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei/buechereien-in-gievenbeck.html",
+        "Extra_Service": ""
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.579607881573508,
+          51.96791132393848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "NAME": "City Library Gievenbeck-Auenviertel",
+        "TEL": "0251/492-4222",
+        "LINK1_TXT": "Homepage",
+        "LINK1": "https://www.stadt-muenster.de/buecherei/buechereien-in-gievenbeck.html",
+        "Extra_Service": "Barrier-free access to toilets; PCs with Internet access, printers; WLAN for customers; copiers"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          7.565928582622749,
+          51.965947169178115
+        ]
+      }
+    }
+  ]
+}

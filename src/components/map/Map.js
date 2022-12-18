@@ -13,10 +13,24 @@ import hotelMarker from '../icons/hotel.png'
 
 import Hotels from './Shelters/Hotels'
 import Hospitals from './Shelters/Hospitals'
+import FloodLow from './flood/FloodLow'
+import FloodMedium from './flood/FloodMedium'
+import FloodHigh from './flood/FloodHigh'
+import Population from './population/Population'
+import Schools from './Shelters/Schools'
+import UserPosition from './position/UserPosition'
 
 const center = [51.9607, 7.6261]
 
-function Map({ showHotels, showHospitals }) {
+function Map({
+    showHotels,
+    showHospitals,
+    showFloodLow,
+    showFloodMedium,
+    showFloodHigh,
+    showPopulation,
+    showSchools,
+}) {
     return (
         <div>
             <MapContainer
@@ -37,6 +51,14 @@ function Map({ showHotels, showHospitals }) {
                 />
                 {showHotels && <Hotels />}
                 {showHospitals && <Hospitals />}
+                {showSchools && <Schools />}
+
+                {showFloodLow && <FloodLow />}
+                {showFloodLow && <FloodMedium />}
+                {showFloodLow && <FloodHigh />}
+                {showPopulation && <Population />}
+
+                <UserPosition />
             </MapContainer>
         </div>
     )

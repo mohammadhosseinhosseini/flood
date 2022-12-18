@@ -5,12 +5,15 @@ import LocalHospitalTwoToneIcon from '@mui/icons-material/LocalHospitalTwoTone'
 import { Button } from '@mui/material'
 import RemoveRedEyeTwoToneIcon from '@mui/icons-material/RemoveRedEyeTwoTone'
 import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
+import SchoolTwoToneIcon from '@mui/icons-material/SchoolTwoTone'
 
 function ShelterFilters({
     showHotels,
     changeShowHotels,
     showHospitals,
     changeShowHospitals,
+    showSchools,
+    changeShowSchools,
 }) {
     return (
         <div>
@@ -20,10 +23,11 @@ function ShelterFilters({
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={!showHotels && !showHospitals}
+                        disabled={!showHotels && !showHospitals && !showSchools}
                         onClick={() => {
                             changeShowHotels(false)
                             changeShowHospitals(false)
+                            changeShowSchools(false)
                         }}
                         startIcon={<VisibilityOffTwoToneIcon />}
                     >
@@ -34,10 +38,11 @@ function ShelterFilters({
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={showHotels && showHospitals}
+                        disabled={showHotels && showHospitals && showSchools}
                         onClick={() => {
                             changeShowHotels(true)
                             changeShowHospitals(true)
+                            changeShowSchools(true)
                         }}
                         startIcon={<RemoveRedEyeTwoToneIcon />}
                     >
@@ -46,6 +51,12 @@ function ShelterFilters({
                 </div>
             </div>
             <div className='mx-3'>
+                <FilterSwitch
+                    label='Schools'
+                    checked={showSchools}
+                    onChange={changeShowSchools}
+                    icon={<SchoolTwoToneIcon />}
+                />
                 <FilterSwitch
                     label='Hotels'
                     checked={showHotels}

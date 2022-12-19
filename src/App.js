@@ -15,6 +15,7 @@ function App() {
     const [showPopulation, setShowPopulation] = useState(false)
     const [showSchools, setShowSchools] = useState(false)
     const [showLibraries, setShowLibraries] = useState(false)
+    const [showFlood, setShowFlood] = useState('low')
 
     const changeShowHotels = (checked) => {
         setShowHotels(checked)
@@ -48,6 +49,10 @@ function App() {
         setShowLibraries(checked)
     }
 
+    const changeShowFlood = (value) => {
+        setShowFlood(value)
+    }
+
     return (
         <>
             <Header />
@@ -63,6 +68,8 @@ function App() {
                             changeShowFloodHigh={changeShowFloodHigh}
                             showPopulation={showPopulation}
                             changeShowPopulation={changeShowPopulation}
+                            showFlood={showFlood}
+                            changeShowFlood={changeShowFlood}
                         />
 
                         <ShelterFilters
@@ -86,6 +93,7 @@ function App() {
                             showPopulation={showPopulation}
                             showSchools={showSchools}
                             showLibraries={showLibraries}
+                            showFlood={showFlood}
                         />
                         <div className='mt-4'>
                             <h3 className='m-0'>Year: {year}</h3>

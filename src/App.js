@@ -18,7 +18,7 @@ function App() {
     const [showLibraries, setShowLibraries] = useState(false)
     const [showFlood, setShowFlood] = useState('high')
     const [opacity, setOpacity] = useState(0.5)
-    const [showHelpModal, setShowHelpModal] = useState(false)
+    const [showHelpModal, setShowHelpModal] = useState(true)
 
     const changeShowHotels = (checked) => {
         setShowHotels(checked)

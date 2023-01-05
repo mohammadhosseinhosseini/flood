@@ -4,11 +4,11 @@ import { GeoJSON } from 'react-leaflet'
 import data from '../../../data/flood_high.json'
 import LocationGeoJson from '../Shelters/LocationGeoJson'
 
-function FloodHigh() {
+function FloodHigh({ opacity }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillColor: 'orange',
-            fillOpacity: 0.6,
+            fillOpacity: opacity,
             color: 'orange',
             weight: 1,
         })

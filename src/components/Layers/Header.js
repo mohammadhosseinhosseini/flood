@@ -6,8 +6,9 @@ import Typography from '@mui/material/Typography'
 import Button from '@mui/material/Button'
 import IconButton from '@mui/material/IconButton'
 import MenuIcon from '@mui/icons-material/Menu'
+import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone'
 
-export default function Header() {
+export default function Header({ toggleShowHelp }) {
     return (
         <Box sx={{ flexGrow: 1 }}>
             <AppBar position='static'>
@@ -28,7 +29,13 @@ export default function Header() {
                     >
                         Flood disaster management
                     </Typography>
-                    <Button color='inherit'>Login</Button>
+                    <IconButton
+                        onClick={toggleShowHelp}
+                        size='large'
+                        style={{ color: 'white' }}
+                    >
+                        <InfoTwoToneIcon />
+                    </IconButton>
                 </Toolbar>
             </AppBar>
         </Box>

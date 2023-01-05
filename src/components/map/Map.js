@@ -34,6 +34,7 @@ function Map({
     showSchools,
     showLibraries,
     showFlood,
+    opacity,
 }) {
     return (
         <div>
@@ -59,9 +60,9 @@ function Map({
                 {showLibraries && <Libraries />}
                 {/* <Buildings /> */}
 
-                {showFlood === 'low' && <FloodLow />}
-                {showFlood === 'medium' && <FloodMedium />}
-                {showFlood === 'high' && <FloodHigh />}
+                {showFlood === 'low' && <FloodLow opacity={opacity} />}
+                {showFlood === 'medium' && <FloodMedium opacity={opacity} />}
+                {showFlood === 'high' && <FloodHigh opacity={opacity} />}
                 {showPopulation && <Population />}
 
                 <UserPosition />

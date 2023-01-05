@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import FilterSwitch from './FilterSwitch'
 import HotelTwoToneIcon from '@mui/icons-material/HotelTwoTone'
 import LocalHospitalTwoToneIcon from '@mui/icons-material/LocalHospitalTwoTone'
@@ -9,6 +9,7 @@ import FloodTwoToneIcon from '@mui/icons-material/FloodTwoTone'
 import GroupsTwoToneIcon from '@mui/icons-material/GroupsTwoTone'
 import TextField from '@mui/material/TextField'
 import MenuItem from '@mui/material/MenuItem'
+import FloodOpacitySlider from './FloodOpacitySlider'
 
 const floodLevels = [
     {
@@ -36,6 +37,8 @@ function FloodFilter({
     changeShowFloodHigh,
     showPopulation,
     changeShowPopulation,
+    opacity,
+    setOpacity,
 }) {
     return (
         <div>
@@ -101,6 +104,10 @@ function FloodFilter({
                     </MenuItem>
                 ))}
             </TextField>
+            <div className='d-flex'>
+                <p className='mb-0 me-3'>{opacity}</p>
+                <FloodOpacitySlider value={opacity} setValue={setOpacity} />
+            </div>
             <div className='mx-3'>
                 {/* <FilterSwitch
                     label='Flood Hazard Area (Low)'

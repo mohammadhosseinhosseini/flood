@@ -4,6 +4,7 @@ import Header from './components/Layers/Header'
 import Map from './components/map/Map'
 import YearSlider from './components/map/YearSlider'
 import FloodFilter from './components/filters/FloodFilter'
+import { HelpModal } from './components/help/HelpModal'
 
 function App() {
     const [showHotels, setShowHotels] = useState(false)
@@ -15,7 +16,9 @@ function App() {
     const [showPopulation, setShowPopulation] = useState(false)
     const [showSchools, setShowSchools] = useState(false)
     const [showLibraries, setShowLibraries] = useState(false)
-    const [showFlood, setShowFlood] = useState('low')
+    const [showFlood, setShowFlood] = useState('high')
+    const [opacity, setOpacity] = useState(0.5)
+    const [showHelpModal, setShowHelpModal] = useState(false)
 
     const changeShowHotels = (checked) => {
         setShowHotels(checked)
@@ -55,8 +58,13 @@ function App() {
 
     return (
         <>
-            <Header />
-            <div className='container pt-3'>
+            <Header toggleShowHelp={() => setShowHelpModal((prev) => !prev)} />
+            <div
+                className='container pt-3'
+                style={{
+                    position: 'relative',
+                }}
+            >
                 <div className='row'>
                     <div className='col-12 col-lg-3'>
                         <FloodFilter
@@ -70,6 +78,8 @@ function App() {
                             changeShowPopulation={changeShowPopulation}
                             showFlood={showFlood}
                             changeShowFlood={changeShowFlood}
+                            opacity={opacity}
+                            setOpacity={setOpacity}
                         />
 
                         <ShelterFilters
@@ -94,6 +104,7 @@ function App() {
                             showSchools={showSchools}
                             showLibraries={showLibraries}
                             showFlood={showFlood}
+                            opacity={opacity}
                         />
                         <div className='mt-4'>
                             <h3 className='m-0'>Year: {year}</h3>
@@ -101,6 +112,10 @@ function App() {
                         </div>
                     </div>
                 </div>
+                <HelpModal
+                    handleClose={() => setShowHelpModal(false)}
+                    show={showHelpModal}
+                />
             </div>
         </>
     )

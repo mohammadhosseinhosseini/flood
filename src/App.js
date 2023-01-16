@@ -71,6 +71,9 @@ function App() {
         } catch (error) {
             console.log('ERROR')
             console.log(error)
+            console.log(
+                'url: ' + `${getApiUrl()}/u/Flood_Depths_Normalized_Low.json`
+            )
         }
     }
 

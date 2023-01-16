@@ -60,7 +60,7 @@ function App() {
     const loadDepthLow = async () => {
         try {
             const res = await axios.get(
-                `${getApiUrl()}/u/Flood_Depths_Normalized_Low.json`
+                `https://flood-gis.s3.eu-central-1.amazonaws.com/Flood_Depths_Normalized_Low.json`
             )
             setDepth((prev) => {
                 return {
@@ -71,16 +71,13 @@ function App() {
         } catch (error) {
             console.log('ERROR')
             console.log(error)
-            console.log(
-                'url: ' + `${getApiUrl()}/u/Flood_Depths_Normalized_Low.json`
-            )
         }
     }
 
     const loadDepthMedium = async () => {
         try {
             const res = await axios.get(
-                `${getApiUrl()}/u/Flood_Depths_Normalized_Medium.json`
+                `https://flood-gis.s3.eu-central-1.amazonaws.com/Flood_Depths_Normalized_Medium.json`
             )
             setDepth((prev) => {
                 return {
@@ -97,7 +94,7 @@ function App() {
     const loadDepthHigh = async () => {
         try {
             const res = await axios.get(
-                `${getApiUrl()}/u/Flood_Depths_Normalized_High.json`
+                `https://flood-gis.s3.eu-central-1.amazonaws.com/Flood_Depths_Normalized_High.json`
             )
             setDepth((prev) => {
                 return {

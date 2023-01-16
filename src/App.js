@@ -15,7 +15,7 @@ import PopupAlert from './components/alert/PopupAlert'
 function App() {
     const [year, setYear] = useState(parseInt(new Date().getFullYear()))
     const [showFlood, setShowFlood] = useState('low')
-    const [opacity, setOpacity] = useState(0.5)
+    const [opacity, setOpacity] = useState(1)
     const [depth, setDepth] = useState({
         low: null,
         medium: null,

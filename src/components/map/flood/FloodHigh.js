@@ -28,7 +28,7 @@ function FloodHigh({ opacity, depth }) {
         } else if (feature.properties.T_class === '14') {
             fillColor = '#3561df'
         } else if (feature.properties.T_class === '15') {
-            fillColor = '133bbf'
+            fillColor = '#133bbf'
         }
 
         if (fillColor === 'blue') {

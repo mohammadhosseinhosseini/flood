@@ -13,7 +13,7 @@ const PopupAlert = ({ alert, handleClose }) => {
     return (
         <Snackbar
             open={alert.open}
-            autoHideDuration={alert.autohide ? 5000 : null}
+            autoHideDuration={alert.autohide ? 5000 : 100000}
             onClose={handleClose}
             anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
         >

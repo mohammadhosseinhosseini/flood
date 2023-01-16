@@ -1,16 +1,13 @@
 import React, { useEffect, useState } from 'react'
-import ShelterFilters from './components/filters/ShelterFilters'
 import Header from './components/Layers/Header'
 import Map from './components/map/Map'
 import YearSlider from './components/map/YearSlider'
-import FloodFilter from './components/filters/FloodFilter'
 import HelpModal from './components/help/HelpModal'
-import VisibilityTwoToneIcon from '@mui/icons-material/VisibilityTwoTone'
-import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
-import { IconButton } from '@mui/material'
+
 import { getApiUrl } from './helper/helper'
 import axios from 'axios'
 import PopupAlert from './components/alert/PopupAlert'
+import Filters from './components/filters/Filters'
 
 function App() {
     const [year, setYear] = useState(parseInt(new Date().getFullYear()))
@@ -26,7 +23,7 @@ function App() {
         open: false,
         message: '',
         severity: 'success',
-        autohide: true,
+        autohide: 5000,
     })
 
     const [filters, setFilters] = useState({
@@ -46,8 +43,20 @@ function App() {
     })
 
     useEffect(() => {
+        setAlert({
+            open: true,
+            message: 'Loading...',
+            severity: 'info',
+            autohide: 5000,
+        })
         setTimeout(() => {
             changeFilters(false, 'changeFlood')
+            setAlert({
+                open: true,
+                message: 'Done!',
+                severity: 'success',
+                autohide: 2000,
+            })
         }, 100)
     }, [filters.changeFlood])
 
@@ -59,23 +68,20 @@ function App() {
         setFilters({ ...filters, [name]: checked })
     }
 
+    const toggleFilter = (name) => {
+        setFilters({ ...filters, [name]: !filters[name] })
+    }
+
     const changeShowFlood = (value) => {
         setShowFlood(value)
     }
-
-    // useEffect(() => {
-    //     setFilters({
-    //         ...filters,
-    //         resetFlood: true,
-    //     })
-    // }, [opacity])
 
     useEffect(() => {
         setAlert({
             open: true,
             message: 'Loading data...',
             severity: 'info',
-            autohide: false,
+            autohide: 100000,
         })
         loadData()
     }, [])
@@ -88,7 +94,7 @@ function App() {
             open: true,
             message: 'Data loaded successfully',
             severity: 'success',
-            autohide: true,
+            autohide: 3500,
         })
     }
 
@@ -161,72 +167,22 @@ function App() {
                     changeFilters={changeFilters}
                     depth={depth}
                 />
-                <div
-                    style={{
-                        position: 'absolute',
-                        top: 10,
-                        left: 100,
-                        zIndex: 1000,
-                        // backgroundColor: 'white',
-                    }}
-                >
-                    <div
-                        className='col-3 col-lg-3 bg-white'
-                        style={{
-                            borderRadius: '10px',
-                            boxShadow: '0 0 10px 0 rgba(0,0,0,0.2)',
-                            padding: 10,
-                            width: 300,
-                        }}
-                    >
-                        <div className='d-flex align-items-center'>
-                            <h4 className='me-auto mb-0'>Filters</h4>
-                            <IconButton
-                                color='primary'
-                                onClick={() =>
-                                    setFilters((prev) => {
-                                        return {
-                                            ...prev,
-                                            showFilters: !prev.showFilters,
-                                        }
-                                    })
-                                }
-                            >
-                                {filters.showFilters ? (
-                                    <VisibilityOffTwoToneIcon />
-                                ) : (
-                                    <VisibilityTwoToneIcon />
-                                )}
-                            </IconButton>
-                        </div>
-                        {filters.showFilters && (
-                            <>
-                                <FloodFilter
-                                    // showPopulation={showPopulation}
-                                    // changeShowPopulation={changeShowPopulation}
-                                    showFlood={showFlood}
-                                    changeShowFlood={changeShowFlood}
-                                    opacity={opacity}
-                                    setOpacity={setOpacity}
-                                    //
-                                    filters={filters}
-                                    changeFilters={changeFilters}
-                                />
 
-                                <ShelterFilters
-                                    filters={filters}
-                                    changeFilters={changeFilters}
-                                    setFilters={setFilters}
-                                />
-                            </>
-                        )}
-                    </div>
-                    <div className='col'>
-                        {/* <div className='mt-4'>
+                <Filters
+                    filters={filters}
+                    toggleFilter={toggleFilter}
+                    changeFilters={changeFilters}
+                    opacity={opacity}
+                    setOpacity={setOpacity}
+                    showFlood={showFlood}
+                    changeShowFlood={changeShowFlood}
+                    setFilters={setFilters}
+                />
+                <div className='col'>
+                    {/* <div className='mt-4'>
                             <h3 className='m-0'>Year: {year}</h3>
                             <YearSlider year={year} setYear={setYear} />
                         </div> */}
-                    </div>
                 </div>
                 <HelpModal
                     handleClose={() => changeFilters(false, 'showHelpModal')}

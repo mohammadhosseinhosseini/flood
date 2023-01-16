@@ -38,6 +38,8 @@ function FloodFilter({
     filters,
     changeFilters,
 }) {
+    const [value, setValue] = useState(opacity)
+
     return (
         <div>
             <TextField
@@ -57,22 +59,24 @@ function FloodFilter({
                     </MenuItem>
                 ))}
             </TextField>
-            <div className='d-flex'>
+            <div className='d-flex align-items-center'>
                 <p className='mb-0 me-3' style={{ width: 20 }}>
                     {opacity}
                 </p>
-                <FloodOpacitySlider value={opacity} setValue={setOpacity} />
-                <Button
-                    variant='contained'
-                    color='primary'
-                    onClick={() => {
-                        changeFilters(true, 'changeFlood')
-                    }}
-                    className='ms-2 px-4'
-                    disabled={filters.changeFlood}
-                >
-                    Change
-                </Button>
+                <FloodOpacitySlider value={value} setValue={setValue} />
+                <div className='ms-3'>
+                    <Button
+                        variant='contained'
+                        color='primary'
+                        onClick={() => {
+                            changeFilters(true, 'changeFlood')
+                            setOpacity(value)
+                        }}
+                        disabled={filters.changeFlood}
+                    >
+                        Change
+                    </Button>
+                </div>
             </div>
             <div className='mx-3'>
                 <FilterSwitch

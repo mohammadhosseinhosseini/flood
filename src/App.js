@@ -44,6 +44,7 @@ function App() {
         showFilters: !isMobile,
         changeFlood: false,
         showBoundries: true,
+        loading: true,
     })
 
     useEffect(() => {
@@ -102,6 +103,7 @@ function App() {
             severity: 'success',
             autohide: 3500,
         })
+        changeFilters(false, 'loading')
     }
 
     const loadDepthLow = async () => {

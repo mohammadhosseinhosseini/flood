@@ -64,6 +64,7 @@ const Filters = ({
                         <IconButton
                             color='primary'
                             onClick={() => toggleFilter('showFilters')}
+                            disabled={filters.loading}
                         >
                             {filters.showFilters ? (
                                 <VisibilityOffTwoToneIcon />

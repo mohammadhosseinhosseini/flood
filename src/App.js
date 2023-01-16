@@ -20,9 +20,9 @@ function App() {
     })
 
     const [alert, setAlert] = useState({
-        open: false,
-        message: '',
-        severity: 'success',
+        open: true,
+        message: 'Loading...',
+        severity: 'info',
         autohide: 5000,
     })
 
@@ -44,21 +44,23 @@ function App() {
     })
 
     useEffect(() => {
-        setAlert({
-            open: true,
-            message: 'Loading...',
-            severity: 'info',
-            autohide: 5000,
-        })
-        setTimeout(() => {
-            changeFilters(false, 'changeFlood')
+        if (filters.changeFlood) {
             setAlert({
                 open: true,
-                message: 'Done!',
-                severity: 'success',
-                autohide: 2000,
+                message: 'Loading...',
+                severity: 'info',
+                autohide: 5000,
             })
-        }, 100)
+            setTimeout(() => {
+                changeFilters(false, 'changeFlood')
+                setAlert({
+                    open: true,
+                    message: 'Done!',
+                    severity: 'success',
+                    autohide: 2000,
+                })
+            }, 100)
+        }
     }, [filters.changeFlood])
 
     const closeAlert = () => {

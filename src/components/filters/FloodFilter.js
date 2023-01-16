@@ -52,7 +52,7 @@ function FloodFilter({
             severity: 'success',
             autohide: 2000,
         })
-        setLoading(false)
+        // setLoading(false)
     }, [showFloodTemp])
 
     return (
@@ -68,7 +68,7 @@ function FloodFilter({
                     setLoading(true)
                     setAlert({
                         open: true,
-                        message: 'Lading...',
+                        message: 'Loading...',
                         severity: 'info',
                         autohide: 4000,
                     })

@@ -40,50 +40,6 @@ function FloodFilter({
 }) {
     return (
         <div>
-            {/* <div className='mb-3 row'>
-                <div className='col-6'>
-                    <Button
-                        fullWidth
-                        variant='outlined'
-                        disabled={
-                            !showFloodLow &&
-                            !showFloodMedium &&
-                            !showFloodHigh &&
-                            !showPopulation
-                        }
-                        onClick={() => {
-                            changeShowFloodLow(false)
-                            changeShowFloodMedium(false)
-                            changeShowFloodHigh(false)
-                            changeShowPopulation(false)
-                        }}
-                        startIcon={<VisibilityOffTwoToneIcon />}
-                    >
-                        Hide All
-                    </Button>
-                </div>
-                <div className='col-6'>
-                    <Button
-                        fullWidth
-                        variant='outlined'
-                        disabled={
-                            showFloodLow &&
-                            showFloodMedium &&
-                            showFloodHigh &&
-                            showPopulation
-                        }
-                        onClick={() => {
-                            changeShowFloodLow(true)
-                            changeShowFloodMedium(true)
-                            changeShowFloodHigh(true)
-                            changeShowPopulation(true)
-                        }}
-                        startIcon={<RemoveRedEyeTwoToneIcon />}
-                    >
-                        Show All
-                    </Button>
-                </div>
-            </div> */}
             <TextField
                 id='outlined-select-currency'
                 select
@@ -102,8 +58,21 @@ function FloodFilter({
                 ))}
             </TextField>
             <div className='d-flex'>
-                <p className='mb-0 me-3'>{opacity}</p>
+                <p className='mb-0 me-3' style={{ width: 20 }}>
+                    {opacity}
+                </p>
                 <FloodOpacitySlider value={opacity} setValue={setOpacity} />
+                <Button
+                    variant='contained'
+                    color='primary'
+                    onClick={() => {
+                        changeFilters(true, 'changeFlood')
+                    }}
+                    className='ms-2 px-4'
+                    disabled={filters.changeFlood}
+                >
+                    Change
+                </Button>
             </div>
             <div className='mx-3'>
                 <FilterSwitch

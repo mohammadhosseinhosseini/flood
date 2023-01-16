@@ -63,15 +63,23 @@ function Map({
                 {filters.showLibraries && <Libraries />}
                 {/* <Buildings /> */}
 
-                {showFlood === 'low' && (
-                    <FloodLow opacity={opacity} depth={depth.low} />
+                {!filters.changeFlood && (
+                    <>
+                        {showFlood === 'low' && (
+                            <FloodLow opacity={opacity} depth={depth.low} />
+                        )}
+                        {showFlood === 'medium' && (
+                            <FloodMedium
+                                opacity={opacity}
+                                depth={depth.medium}
+                            />
+                        )}
+                        {showFlood === 'high' && (
+                            <FloodHigh opacity={opacity} depth={depth.high} />
+                        )}
+                    </>
                 )}
-                {showFlood === 'medium' && (
-                    <FloodMedium opacity={opacity} depth={depth.medium} />
-                )}
-                {showFlood === 'high' && (
-                    <FloodHigh opacity={opacity} depth={depth.high} />
-                )}
+
                 {filters.showPopulation && <Population />}
                 {filters.showFireStation && <FireBuildings />}
 

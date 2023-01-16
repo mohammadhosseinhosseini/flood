@@ -38,12 +38,13 @@ function FloodLow({ opacity, depth }) {
         } else {
             layer.setStyle({
                 fillColor: fillColor,
-                fillOpacity: 1,
+                fillOpacity: opacity,
                 weight: 0,
             })
         }
     }
-    if (depth === null) return <div>Loading...</div>
+
+    if (depth === null || opacity === 0) return null
 
     return (
         <div>

@@ -18,7 +18,7 @@ export default function FloodOpacitySlider({ value, setValue }) {
                 defaultValue={0.7}
                 getAriaValueText={valuetext}
                 valueLabelDisplay='auto'
-                step={0.05}
+                step={0.1}
                 marks
                 min={0}
                 max={1}

@@ -10,6 +10,7 @@ import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
 import { IconButton } from '@mui/material'
 import { getApiUrl } from './helper/helper'
 import axios from 'axios'
+import PopupAlert from './components/alert/PopupAlert'
 
 function App() {
     const [year, setYear] = useState(parseInt(new Date().getFullYear()))
@@ -19,6 +20,13 @@ function App() {
         low: null,
         medium: null,
         high: null,
+    })
+
+    const [alert, setAlert] = useState({
+        open: false,
+        message: '',
+        severity: 'success',
+        autohide: true,
     })
 
     const [filters, setFilters] = useState({
@@ -34,7 +42,18 @@ function App() {
         showFloodAffectedBuildings: false,
         resetFlood: true,
         showFilters: true,
+        changeFlood: false,
     })
+
+    useEffect(() => {
+        setTimeout(() => {
+            changeFilters(false, 'changeFlood')
+        }, 100)
+    }, [filters.changeFlood])
+
+    const closeAlert = () => {
+        setAlert((pre) => ({ ...pre, open: false }))
+    }
 
     const changeFilters = (checked, name) => {
         setFilters({ ...filters, [name]: checked })
@@ -52,10 +71,26 @@ function App() {
     // }, [opacity])
 
     useEffect(() => {
-        loadDepthLow()
-        loadDepthMedium()
-        loadDepthHigh()
+        setAlert({
+            open: true,
+            message: 'Loading data...',
+            severity: 'info',
+            autohide: false,
+        })
+        loadData()
     }, [])
+
+    const loadData = async () => {
+        await loadDepthLow()
+        await loadDepthMedium()
+        await loadDepthHigh()
+        setAlert({
+            open: true,
+            message: 'Data loaded successfully',
+            severity: 'success',
+            autohide: true,
+        })
+    }
 
     const loadDepthLow = async () => {
         try {
@@ -197,6 +232,7 @@ function App() {
                     handleClose={() => changeFilters(false, 'showHelpModal')}
                     show={filters.showHelpModal}
                 />
+                <PopupAlert handleClose={closeAlert} alert={alert} />
             </div>
         </>
     )

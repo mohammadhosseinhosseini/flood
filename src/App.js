@@ -40,6 +40,7 @@ function App() {
         resetFlood: true,
         showFilters: true,
         changeFlood: false,
+        showBoundries: true,
     })
 
     useEffect(() => {
@@ -110,7 +111,12 @@ function App() {
                 }
             })
         } catch (error) {
-            console.log('ERROR')
+            setAlert({
+                open: true,
+                message: 'Error loading data',
+                severity: 'error',
+                autohide: 3500,
+            })
             console.log(error)
         }
     }
@@ -127,7 +133,12 @@ function App() {
                 }
             })
         } catch (error) {
-            console.log('ERROR')
+            setAlert({
+                open: true,
+                message: 'Error loading data',
+                severity: 'error',
+                autohide: 3500,
+            })
             console.log(error)
         }
     }
@@ -144,7 +155,12 @@ function App() {
                 }
             })
         } catch (error) {
-            console.log('ERROR')
+            setAlert({
+                open: true,
+                message: 'Error loading data',
+                severity: 'error',
+                autohide: 3500,
+            })
             console.log(error)
         }
     }
@@ -177,6 +193,7 @@ function App() {
                     showFlood={showFlood}
                     changeShowFlood={changeShowFlood}
                     setFilters={setFilters}
+                    setAlert={setAlert}
                 />
                 <div className='col'>
                     {/* <div className='mt-4'>

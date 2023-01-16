@@ -44,7 +44,7 @@ function Map({
             <MapContainer
                 center={center}
                 zoom={12}
-                scrollWheelZoom={false}
+                scrollWheelZoom={true}
                 style={{
                     height: '95vh',
                     width: '100%',
@@ -66,16 +66,25 @@ function Map({
                 {!filters.changeFlood && (
                     <>
                         {showFlood === 'low' && (
-                            <FloodLow opacity={opacity} depth={depth.low} />
+                            <FloodLow
+                                opacity={opacity}
+                                depth={depth.low}
+                                filters={filters}
+                            />
                         )}
                         {showFlood === 'medium' && (
                             <FloodMedium
                                 opacity={opacity}
                                 depth={depth.medium}
+                                filters={filters}
                             />
                         )}
                         {showFlood === 'high' && (
-                            <FloodHigh opacity={opacity} depth={depth.high} />
+                            <FloodHigh
+                                opacity={opacity}
+                                depth={depth.high}
+                                filters={filters}
+                            />
                         )}
                     </>
                 )}

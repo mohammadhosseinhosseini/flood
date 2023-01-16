@@ -6,11 +6,11 @@ import { GeoJSON } from 'react-leaflet'
 // import depth from '../../../data/Flood_Depths_Normalized_Medium.json'
 import floodHazard from '../../../data/Flood_hazard_Medium.json'
 
-function FloodMedium({ opacity, depth }) {
+function FloodMedium({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: 1,
+            opacity: opacity,
             color: 'orange',
             weight: 3,
         })
@@ -49,7 +49,9 @@ function FloodMedium({ opacity, depth }) {
 
     return (
         <div>
-            <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+            {filters.showBoundries && (
+                <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+            )}
             <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
         </div>
     )

@@ -5,11 +5,11 @@ import { getApiUrl } from '../../../helper/helper'
 import floodHazard from '../../../data/Flood_hazard_Low.json'
 // import depth from '../../../data/Flood_Depths_Normalized_Low.json'
 
-function FloodLow({ opacity, depth }) {
+function FloodLow({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: 1,
+            opacity: opacity,
             color: 'red',
             weight: 3,
         })
@@ -49,7 +49,9 @@ function FloodLow({ opacity, depth }) {
     return (
         <div>
             <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
-            <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+            {filters.showBoundries && (
+                <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+            )}
         </div>
     )
 }

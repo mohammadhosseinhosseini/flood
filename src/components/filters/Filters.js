@@ -21,6 +21,7 @@ const Filters = ({
     showFlood,
     changeShowFlood,
     setFilters,
+    setAlert,
 }) => {
     const [width, height] = useWindowSize()
     const isMobile = width < 900
@@ -34,7 +35,7 @@ const Filters = ({
                 zIndex: 1000,
                 top: isMobile ? 'auto' : 10,
                 bottom: isMobile ? 30 : 'auto',
-                width: isMobile ? '100%' : 350,
+                width: isMobile ? '100%' : 380,
                 // backgroundColor: 'white',
             }}
         >
@@ -75,33 +76,34 @@ const Filters = ({
                             )}
                         </IconButton>
                     </div>
-                    {filters.showFilters && (
-                        <div
-                            className='p-3'
-                            style={{
-                                maxHeight: height - 100,
-                                overflow: 'scroll',
-                            }}
-                        >
-                            <FloodFilter
-                                // showPopulation={showPopulation}
-                                // changeShowPopulation={changeShowPopulation}
-                                showFlood={showFlood}
-                                changeShowFlood={changeShowFlood}
-                                opacity={opacity}
-                                setOpacity={setOpacity}
-                                //
-                                filters={filters}
-                                changeFilters={changeFilters}
-                            />
 
-                            <ShelterFilters
-                                filters={filters}
-                                changeFilters={changeFilters}
-                                setFilters={setFilters}
-                            />
-                        </div>
-                    )}
+                    <div
+                        className='p-3'
+                        style={{
+                            maxHeight: isMobile ? height - 100 : 'auto',
+                            overflow: isMobile ? 'scroll' : 'auto',
+                            display: filters.showFilters ? 'block' : 'none',
+                        }}
+                    >
+                        <FloodFilter
+                            // showPopulation={showPopulation}
+                            // changeShowPopulation={changeShowPopulation}
+                            showFlood={showFlood}
+                            changeShowFlood={changeShowFlood}
+                            opacity={opacity}
+                            setOpacity={setOpacity}
+                            //
+                            filters={filters}
+                            changeFilters={changeFilters}
+                            setAlert={setAlert}
+                        />
+
+                        <ShelterFilters
+                            filters={filters}
+                            changeFilters={changeFilters}
+                            setFilters={setFilters}
+                        />
+                    </div>
                 </div>
             </div>
         </div>

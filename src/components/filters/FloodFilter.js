@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import FilterSwitch from './FilterSwitch'
 import HotelTwoToneIcon from '@mui/icons-material/HotelTwoTone'
 import LocalHospitalTwoToneIcon from '@mui/icons-material/LocalHospitalTwoTone'
@@ -10,6 +10,7 @@ import GroupsTwoToneIcon from '@mui/icons-material/GroupsTwoTone'
 import TextField from '@mui/material/TextField'
 import MenuItem from '@mui/material/MenuItem'
 import FloodOpacitySlider from './FloodOpacitySlider'
+import ShowChartTwoToneIcon from '@mui/icons-material/ShowChartTwoTone'
 
 const floodLevels = [
     {
@@ -37,8 +38,22 @@ function FloodFilter({
     setOpacity,
     filters,
     changeFilters,
+    setAlert,
 }) {
     const [value, setValue] = useState(opacity)
+    const [showFloodTemp, setShowFloodTemp] = useState(showFlood)
+    const [loading, setLoading] = useState(false)
+
+    useEffect(() => {
+        changeShowFlood(showFloodTemp)
+        setAlert({
+            open: true,
+            message: 'Done.',
+            severity: 'success',
+            autohide: 2000,
+        })
+        setLoading(false)
+    }, [showFloodTemp])
 
     return (
         <div>
@@ -46,12 +61,20 @@ function FloodFilter({
                 id='outlined-select-currency'
                 select
                 label='Flood Risk Liklihood'
-                value={showFlood}
+                value={showFloodTemp}
                 fullWidth
                 className='my-2'
                 onChange={(e) => {
-                    changeShowFlood(e.target.value)
+                    setLoading(true)
+                    setAlert({
+                        open: true,
+                        message: 'Lading...',
+                        severity: 'info',
+                        autohide: 4000,
+                    })
+                    setShowFloodTemp(e.target.value)
                 }}
+                disabled={showFlood !== showFloodTemp}
             >
                 {floodLevels.map((option) => (
                     <MenuItem key={option.value} value={option.value}>
@@ -59,9 +82,20 @@ function FloodFilter({
                     </MenuItem>
                 ))}
             </TextField>
+
+            <div className={`mx-3 mt-1 ${showFlood === 'hide' && 'd-none'}`}>
+                <FilterSwitch
+                    label='Boundries'
+                    checked={filters.showBoundries}
+                    onChange={(checked) => {
+                        changeFilters(checked, 'showBoundries')
+                    }}
+                    icon={<ShowChartTwoToneIcon />}
+                />
+            </div>
             <div className='d-flex align-items-center'>
                 <p className='mb-0 me-3' style={{ width: 20 }}>
-                    {opacity}
+                    {value}
                 </p>
                 <FloodOpacitySlider value={value} setValue={setValue} />
                 <div className='ms-3'>
@@ -104,7 +138,7 @@ function FloodFilter({
                     // icon={<GroupsTwoToneIcon />}
                 />
                 <FilterSwitch
-                    label='Flood affected buildings with bufferzone '
+                    label='Flood affected buildings'
                     checked={filters.showFloodAffectedBuildings}
                     onChange={(checked) => {
                         changeFilters(checked, 'showFloodAffectedBuildings')

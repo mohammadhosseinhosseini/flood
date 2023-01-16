@@ -8,8 +8,11 @@ import { getApiUrl } from './helper/helper'
 import axios from 'axios'
 import PopupAlert from './components/alert/PopupAlert'
 import Filters from './components/filters/Filters'
+import { useWindowSize } from '@react-hook/window-size'
 
 function App() {
+    const [width, height] = useWindowSize()
+    const isMobile = width < 900
     const [year, setYear] = useState(parseInt(new Date().getFullYear()))
     const [showFlood, setShowFlood] = useState('low')
     const [opacity, setOpacity] = useState(1)
@@ -32,13 +35,13 @@ function App() {
         showPopulation: false,
         showSchools: false,
         showLibraries: false,
-        showHelpModal: true,
+        showHelpModal: !isMobile,
         showFireStation: false,
         showBufferZoneAB: false,
         showBufferZone1km: false,
         showFloodAffectedBuildings: false,
         resetFlood: true,
-        showFilters: true,
+        showFilters: !isMobile,
         changeFlood: false,
         showBoundries: true,
     })

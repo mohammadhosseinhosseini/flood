@@ -3,11 +3,7 @@ import { IconButton } from '@mui/material'
 import VisibilityTwoToneIcon from '@mui/icons-material/VisibilityTwoTone'
 import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
 // import { isMobile } from 'react-device-detect'
-import {
-    useWindowSize,
-    useWindowWidth,
-    useWindowHeight,
-} from '@react-hook/window-size'
+import { useWindowSize } from '@react-hook/window-size'
 
 import FloodFilter from './FloodFilter'
 import ShelterFilters from './ShelterFilters'

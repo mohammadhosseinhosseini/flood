@@ -7,45 +7,63 @@ import RemoveRedEyeTwoToneIcon from '@mui/icons-material/RemoveRedEyeTwoTone'
 import VisibilityOffTwoToneIcon from '@mui/icons-material/VisibilityOffTwoTone'
 import SchoolTwoToneIcon from '@mui/icons-material/SchoolTwoTone'
 import ClassTwoToneIcon from '@mui/icons-material/ClassTwoTone'
+import FireTruckIcon from '@mui/icons-material/FireTruck'
 
-function ShelterFilters({
-    showHotels,
-    changeShowHotels,
-    showHospitals,
-    changeShowHospitals,
-    showSchools,
-    changeShowSchools,
-    showLibraries,
-    changeShowLibraries,
-}) {
+function ShelterFilters({ filters, changeFilters, setFilters }) {
     return (
         <div>
             <h4>Shelter Filters</h4>
-            <div className='mb-3 row'>
-                <div className='col-6'>
+            <div className='mb-3 d-flex justify-content-between'>
+                <div className=''>
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={!showHotels && !showHospitals && !showSchools}
+                        disabled={
+                            !filters.showHotels &&
+                            !filters.showHospitals &&
+                            !filters.showSchools &&
+                            !filters.showLibraries &&
+                            !filters.showFireStation
+                        }
                         onClick={() => {
-                            changeShowHotels(false)
-                            changeShowHospitals(false)
-                            changeShowSchools(false)
+                            setFilters((prev) => {
+                                return {
+                                    ...prev,
+                                    showHotels: false,
+                                    showHospitals: false,
+                                    showSchools: false,
+                                    showLibraries: false,
+                                    showFireStation: false,
+                                }
+                            })
                         }}
                         startIcon={<VisibilityOffTwoToneIcon />}
                     >
                         Hide All
                     </Button>
                 </div>
-                <div className='col-6'>
+                <div className=''>
                     <Button
                         fullWidth
                         variant='outlined'
-                        disabled={showHotels && showHospitals && showSchools}
+                        disabled={
+                            filters.showHotels &&
+                            filters.showHospitals &&
+                            filters.showSchools &&
+                            filters.showLibraries &&
+                            filters.showFireStation
+                        }
                         onClick={() => {
-                            changeShowHotels(true)
-                            changeShowHospitals(true)
-                            changeShowSchools(true)
+                            setFilters((prev) => {
+                                return {
+                                    ...prev,
+                                    showHotels: true,
+                                    showHospitals: true,
+                                    showSchools: true,
+                                    showLibraries: true,
+                                    showFireStation: true,
+                                }
+                            })
                         }}
                         startIcon={<RemoveRedEyeTwoToneIcon />}
                     >
@@ -55,27 +73,41 @@ function ShelterFilters({
             </div>
             <div className='mx-3'>
                 <FilterSwitch
+                    label='Fire Stations'
+                    checked={filters.showFireStation}
+                    onChange={(checked) =>
+                        changeFilters(checked, 'showFireStation')
+                    }
+                    icon={<FireTruckIcon />}
+                />
+                <FilterSwitch
                     label='Schools'
-                    checked={showSchools}
-                    onChange={changeShowSchools}
+                    checked={filters.showSchools}
+                    onChange={(checked) =>
+                        changeFilters(checked, 'showSchools')
+                    }
                     icon={<SchoolTwoToneIcon />}
                 />
                 <FilterSwitch
                     label='Libraries'
-                    checked={showLibraries}
-                    onChange={changeShowLibraries}
+                    checked={filters.showLibraries}
+                    onChange={(checked) =>
+                        changeFilters(checked, 'showLibraries')
+                    }
                     icon={<ClassTwoToneIcon />}
                 />
                 <FilterSwitch
                     label='Hotels'
-                    checked={showHotels}
-                    onChange={changeShowHotels}
+                    checked={filters.showHotels}
+                    onChange={(checked) => changeFilters(checked, 'showHotels')}
                     icon={<HotelTwoToneIcon />}
                 />
                 <FilterSwitch
                     label='Hospitals'
-                    checked={showHospitals}
-                    onChange={changeShowHospitals}
+                    checked={filters.showHospitals}
+                    onChange={(checked) =>
+                        changeFilters(checked, 'showHospitals')
+                    }
                     icon={<LocalHospitalTwoToneIcon />}
                 />
             </div>

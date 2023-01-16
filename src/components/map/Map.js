@@ -21,20 +21,23 @@ import Schools from './Shelters/Schools'
 import UserPosition from './position/UserPosition'
 import Libraries from './Shelters/Libraries'
 import Buildings from './Shelters/Buildings'
+import { BuildingsBuffer } from './buildings/BuildingsBuffer'
+import FireBuildings from './Shelters/FireBuildings'
 
 const center = [51.9607, 7.6261]
 
 function Map({
     showHotels,
     showHospitals,
-    showFloodLow,
-    showFloodMedium,
-    showFloodHigh,
     showPopulation,
     showSchools,
     showLibraries,
     showFlood,
     opacity,
+    showFireStation,
+    filters,
+    changeFilters,
+    depth,
 }) {
     return (
         <div>
@@ -43,10 +46,10 @@ function Map({
                 zoom={12}
                 scrollWheelZoom={false}
                 style={{
-                    height: '75vh',
+                    height: '95vh',
                     width: '100%',
                     backgroundColor: 'gray',
-                    marginTop: '8px',
+                    // marginTop: '8px',
                     marginBottom: '9px',
                 }}
             >
@@ -54,16 +57,25 @@ function Map({
                     attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
                     url='https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png'
                 />
-                {showHotels && <Hotels />}
-                {showHospitals && <Hospitals />}
-                {showSchools && <Schools />}
-                {showLibraries && <Libraries />}
+                {filters.showHotels && <Hotels />}
+                {filters.showHospitals && <Hospitals />}
+                {filters.showSchools && <Schools />}
+                {filters.showLibraries && <Libraries />}
                 {/* <Buildings /> */}
 
-                {showFlood === 'low' && <FloodLow opacity={opacity} />}
-                {showFlood === 'medium' && <FloodMedium opacity={opacity} />}
-                {showFlood === 'high' && <FloodHigh opacity={opacity} />}
-                {showPopulation && <Population />}
+                {showFlood === 'low' && (
+                    <FloodLow opacity={opacity} depth={depth.low} />
+                )}
+                {showFlood === 'medium' && (
+                    <FloodMedium opacity={opacity} depth={depth.medium} />
+                )}
+                {showFlood === 'high' && (
+                    <FloodHigh opacity={opacity} depth={depth.high} />
+                )}
+                {filters.showPopulation && <Population />}
+                {filters.showFireStation && <FireBuildings />}
+
+                <BuildingsBuffer filters={filters} />
 
                 <UserPosition />
             </MapContainer>

@@ -1,0 +1,285 @@
+{
+    "type": "FeatureCollection",
+    "features": [
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr Gievenbeck",
+                "contact": "025120250"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.57188,
+                    51.9598815
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Werkfeuerwehr",
+                "contact": "02518340000"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5939827,
+                    51.9595252
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr Münster – Löschzug Altstadt",
+                "contact": "025341845"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6109903,
+                    51.975438
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Werkfeuerwehr",
+                "contact": "02518340000"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6506608,
+                    51.9007657
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Feuer- und Rettungswache 1 Münster",
+                "contact": "025120250"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6109012,
+                    51.9750244
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Feuer- und Rettungswache 2",
+                "contact": "025192770332"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6455616,
+                    51.9463256
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Feuerwehrhaus Wolbeck",
+                "contact": "02506816998"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.7338994,
+                    51.917009
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr LZ Geist",
+                "contact": "025197567112"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6243935,
+                    51.9342206
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr LZ Mecklenbeck",
+                "contact": "02512400808"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5824516,
+                    51.9280836
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr Albachten",
+                "contact": "025366412"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5208643,
+                    51.9246239
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr Nienberge",
+                "contact": "025120250"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5563512,
+                    51.9962098
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "FF Münster - Löschzug 13",
+                "contact": 1909
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.560556,
+                    52.0230679
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr - Löschzug Gremmendorf",
+                "contact": "0251863747"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6672359,
+                    51.9324324
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Feuer- und Rettungswache 3 Münster",
+                "contact": 112
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6258011,
+                    51.8944828
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr LZ Amelsbüren",
+                "contact": 2501970011
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6084826,
+                    51.8816158
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr LZ Loevelingloh",
+                "contact": "0251719000"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.5764606,
+                    51.8934938
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr LZ Sprakel",
+                "contact": "025113210112"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.6116244,
+                    52.0412666
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Löschzug Angelmodde",
+                "contact": "025139477077"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.7006052,
+                    51.9207778
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Freiwillige Feuerwehr Münster, LZ Handorf",
+                "contact": "025120250"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.7129057,
+                    51.9933504
+                ]
+            }
+        },
+        {
+            "type": "Feature",
+            "properties": {
+                "name": "Löschzug Roxel",
+                "contact": "01732116883"
+            },
+            "geometry": {
+                "type": "Point",
+                "coordinates": [
+                    7.528392,
+                    51.9534932
+                ]
+            }
+        }
+    ]
+}

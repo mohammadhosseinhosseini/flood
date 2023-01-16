@@ -18,37 +18,5 @@
     {
         "text": "Flood zone >4m",
         "image": "Legend-5.png"
-    },
-    {
-        "text": "Flood area 0.5-2m (Saxony only)",
-        "image": "Legend-6.png"
-    },
-    {
-        "text": "Flood area >2m (Saxony only)",
-        "image": "Legend-7.png"
-    },
-    {
-        "text": "Flooded area without water depth information (only Baden-Württemberg)",
-        "image": "Legend-8.png"
-    },
-    {
-        "text": "protected flood area 0–0.5m",
-        "image": "Legend-9.png"
-    },
-    {
-        "text": "protected flood area >0.5–1m",
-        "image": "Legend-10.png"
-    },
-    {
-        "text": "protected flood area >1–2m",
-        "image": "Legend-11.png"
-    },
-    {
-        "text": "protected flood area >2–4m",
-        "image": "Legend-12.png"
-    },
-    {
-        "text": "protected flood area >4m",
-        "image": "Legend-13.png"
     }
 ]

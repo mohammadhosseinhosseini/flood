@@ -3,7 +3,7 @@ import React from 'react'
 import CloseTwoToneIcon from '@mui/icons-material/CloseTwoTone'
 import helpItems from './helpItems.json'
 
-export const HelpModal = ({ handleClose, show }) => {
+const HelpModal = ({ handleClose, show }) => {
     return (
         <>
             {show && (
@@ -35,3 +35,26 @@ export const HelpModal = ({ handleClose, show }) => {
         </>
     )
 }
+
+export default HelpModal
+
+// ,
+// {
+//     "text": "protected flood area 0–0.5m",
+//     "image": "Legend-9.png"
+// },
+// {
+//     "text": "protected flood area >0.5–1m",
+//     "image": "Legend-10.png"
+// },
+// {
+//     "text": "protected flood area >1–2m",
+//     "image": "Legend-11.png"
+// },
+// {
+//     "text": "protected flood area >2–4m",
+//     "image": "Legend-12.png"
+// },
+// {
+//     "text": "protected flood area >4m",
+//     "image": "Legend-13.png"

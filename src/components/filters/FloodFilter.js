@@ -13,6 +13,10 @@ import FloodOpacitySlider from './FloodOpacitySlider'
 
 const floodLevels = [
     {
+        label: 'Hide',
+        value: 'hide',
+    },
+    {
         label: 'Low',
         value: 'low',
     },
@@ -29,20 +33,13 @@ const floodLevels = [
 function FloodFilter({
     showFlood,
     changeShowFlood,
-    showFloodLow,
-    changeShowFloodLow,
-    showFloodMedium,
-    changeShowFloodMedium,
-    showFloodHigh,
-    changeShowFloodHigh,
-    showPopulation,
-    changeShowPopulation,
     opacity,
     setOpacity,
+    filters,
+    changeFilters,
 }) {
     return (
         <div>
-            <h4 className=''>Filters</h4>
             {/* <div className='mb-3 row'>
                 <div className='col-6'>
                     <Button
@@ -109,29 +106,37 @@ function FloodFilter({
                 <FloodOpacitySlider value={opacity} setValue={setOpacity} />
             </div>
             <div className='mx-3'>
-                {/* <FilterSwitch
-                    label='Flood Hazard Area (Low)'
-                    checked={showFloodLow}
-                    onChange={changeShowFloodLow}
-                    icon={<FloodTwoToneIcon />}
-                />
-                <FilterSwitch
-                    label='Flood Hazard Area (Medium)'
-                    checked={showFloodMedium}
-                    onChange={changeShowFloodMedium}
-                    icon={<FloodTwoToneIcon />}
-                />
-                <FilterSwitch
-                    label='Flood Hazard Area (High)'
-                    checked={showFloodHigh}
-                    onChange={changeShowFloodHigh}
-                    icon={<FloodTwoToneIcon />}
-                /> */}
                 <FilterSwitch
                     label='Population'
-                    checked={showPopulation}
-                    onChange={changeShowPopulation}
+                    checked={filters.showPopulation}
+                    onChange={(checked) => {
+                        changeFilters(checked, 'showPopulation')
+                    }}
                     icon={<GroupsTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='Flood with bufferzone 1km'
+                    checked={filters.showBufferZone1km}
+                    onChange={(checked) => {
+                        changeFilters(checked, 'showBufferZone1km')
+                    }}
+                    // icon={<GroupsTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='bufferzone affected buildings'
+                    checked={filters.showBufferZoneAB}
+                    onChange={(checked) => {
+                        changeFilters(checked, 'showBufferZoneAB')
+                    }}
+                    // icon={<GroupsTwoToneIcon />}
+                />
+                <FilterSwitch
+                    label='Flood affected buildings with bufferzone '
+                    checked={filters.showFloodAffectedBuildings}
+                    onChange={(checked) => {
+                        changeFilters(checked, 'showFloodAffectedBuildings')
+                    }}
+                    // icon={<GroupsTwoToneIcon />}
                 />
             </div>
         </div>

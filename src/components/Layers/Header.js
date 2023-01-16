@@ -10,7 +10,7 @@ import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone'
 
 export default function Header({ toggleShowHelp }) {
     return (
-        <Box sx={{ flexGrow: 1 }}>
+        <Box sx={{ flexGrow: 1, margin: 0 }}>
             <AppBar position='static'>
                 <Toolbar>
                     <IconButton

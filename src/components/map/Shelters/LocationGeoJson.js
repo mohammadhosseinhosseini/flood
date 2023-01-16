@@ -29,6 +29,7 @@ function LocationGeoJson({ data, icon }) {
             }),
         })
     }
+
     return (
         <div>
             {' '}

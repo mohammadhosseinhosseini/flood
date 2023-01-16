@@ -42,7 +42,6 @@ const Filters = ({
                 // className='bg-white'
                 style={{
                     padding: '0 30px',
-                    // width: isMobile ? '100%' : 300,
                 }}
             >
                 <div
@@ -51,7 +50,6 @@ const Filters = ({
                         boxShadow: '0 0 10px 0 rgba(0,0,0,0.2)',
                         backgroundColor: 'white',
                         width: '100%',
-                        // padding: '6px 10px',
                     }}
                     className={`d-flex ${
                         isMobile ? 'flex-column-reverse' : 'flex-column'
@@ -78,7 +76,13 @@ const Filters = ({
                         </IconButton>
                     </div>
                     {filters.showFilters && (
-                        <div className='p-3'>
+                        <div
+                            className='p-3'
+                            style={{
+                                maxHeight: height - 100,
+                                overflow: 'scroll',
+                            }}
+                        >
                             <FloodFilter
                                 // showPopulation={showPopulation}
                                 // changeShowPopulation={changeShowPopulation}

@@ -40,7 +40,7 @@ function FloodHigh({ opacity, depth, filters }) {
         } else {
             layer.setStyle({
                 fillColor: fillColor,
-                fillOpacity: 1,
+                fillOpacity: opacity,
                 weight: 0,
             })
         }

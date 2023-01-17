@@ -45,6 +45,7 @@ function Map({
                 center={center}
                 zoom={12}
                 scrollWheelZoom={true}
+                // maxZoom={30}
                 style={{
                     height: '95vh',
                     width: '100%',

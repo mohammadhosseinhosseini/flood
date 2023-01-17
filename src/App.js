@@ -67,7 +67,11 @@ function App() {
         }
     }, [filters.changeFlood])
 
-    const closeAlert = () => {
+    const closeAlert = (event, reason) => {
+        if (reason === 'clickaway') {
+            return
+        }
+
         setAlert((pre) => ({ ...pre, open: false }))
     }
 

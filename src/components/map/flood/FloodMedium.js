@@ -1,16 +1,15 @@
 import React, { useEffect } from 'react'
-import { GeoJSON } from 'react-leaflet'
+import { GeoJSON, Pane } from 'react-leaflet'
 
-// import data from '../../../data/flood_medium.json'
-// import LocationGeoJson from '../Shelters/LocationGeoJson'
-// import depth from '../../../data/Flood_Depths_Normalized_Medium.json'
 import floodHazard from '../../../data/Flood_hazard_Medium.json'
+import Buildings from './Buildings'
+import flood_buildings from '../../../data/flood_buildings/Flooded_Buildings_Clipped_Medium.json'
 
 function FloodMedium({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: opacity,
+            opacity: opacity.flood,
             color: 'orange',
             weight: 3,
         })
@@ -18,15 +17,30 @@ function FloodMedium({ opacity, depth, filters }) {
 
     const onEachFeatureDepth = (feature, layer) => {
         var fillColor = 'blue'
-        if (feature.properties.T_class === '11') {
+        if (
+            feature.properties.T_class === '11' ||
+            feature.properties.T_class === '31'
+        ) {
             fillColor = '#d3e1fe'
-        } else if (feature.properties.T_class === '12') {
+        } else if (
+            feature.properties.T_class === '12' ||
+            feature.properties.T_class === '32'
+        ) {
             fillColor = '#769fff'
-        } else if (feature.properties.T_class === '13') {
+        } else if (
+            feature.properties.T_class === '13' ||
+            feature.properties.T_class === '33'
+        ) {
             fillColor = '#5680ef'
-        } else if (feature.properties.T_class === '14') {
+        } else if (
+            feature.properties.T_class === '14' ||
+            feature.properties.T_class === '34'
+        ) {
             fillColor = '#3561df'
-        } else if (feature.properties.T_class === '15') {
+        } else if (
+            feature.properties.T_class === '15' ||
+            feature.properties.T_class === '35'
+        ) {
             fillColor = '#133bbf'
         }
 
@@ -39,20 +53,39 @@ function FloodMedium({ opacity, depth, filters }) {
         } else {
             layer.setStyle({
                 fillColor: fillColor,
-                fillOpacity: opacity,
+                fillOpacity: opacity.flood,
                 weight: 0,
             })
         }
     }
 
-    if (depth === null) return <div>Loading...</div>
+    if (depth === null || opacity.flood === 0) return null
 
     return (
         <div>
             {filters.showBoundries && (
-                <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+                <Pane
+                    name='top'
+                    style={{
+                        zIndex: 10002,
+                    }}
+                >
+                    <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+                </Pane>
             )}
-            <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
+            {filters.showFloodDepth && (
+                <Pane
+                    name='middle'
+                    style={{
+                        zIndex: 10000,
+                    }}
+                >
+                    <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
+                </Pane>
+            )}
+            {filters.showFloodAffectedBuildings && (
+                <Buildings data={flood_buildings} opacity={opacity.building} />
+            )}
         </div>
     )
 }

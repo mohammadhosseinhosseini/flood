@@ -1,19 +1,21 @@
 import * as React from 'react'
-import AppBar from '@mui/material/AppBar'
-import Box from '@mui/material/Box'
-import Toolbar from '@mui/material/Toolbar'
-import Typography from '@mui/material/Typography'
-import Button from '@mui/material/Button'
-import IconButton from '@mui/material/IconButton'
+import {
+    AppBar,
+    Box,
+    Toolbar,
+    Typography,
+    Button,
+    IconButton,
+} from '@mui/material'
 import MenuIcon from '@mui/icons-material/Menu'
 import InfoTwoToneIcon from '@mui/icons-material/InfoTwoTone'
 
-export default function Header({ toggleShowHelp }) {
+export default function Header({ toggleShowHelp, changeFilters }) {
     return (
         <Box sx={{ flexGrow: 1, margin: 0 }}>
             <AppBar position='static'>
                 <Toolbar>
-                    <IconButton
+                    {/* <IconButton
                         size='large'
                         edge='start'
                         color='inherit'
@@ -21,14 +23,23 @@ export default function Header({ toggleShowHelp }) {
                         sx={{ mr: 2 }}
                     >
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton> */}
                     <Typography
                         variant='h6'
                         component='div'
                         sx={{ flexGrow: 1 }}
                     >
-                        Flood disaster management
+                        Münster Flood Mapping Project
                     </Typography>
+                    <Button
+                        onClick={() => {
+                            changeFilters(true, 'showAbout')
+                        }}
+                        // size='small'
+                        style={{ color: 'white' }}
+                    >
+                        Show
+                    </Button>
                     <IconButton
                         onClick={toggleShowHelp}
                         size='large'

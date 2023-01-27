@@ -11,6 +11,9 @@ import TextField from '@mui/material/TextField'
 import MenuItem from '@mui/material/MenuItem'
 import FloodOpacitySlider from './FloodOpacitySlider'
 import ShowChartTwoToneIcon from '@mui/icons-material/ShowChartTwoTone'
+import FloodHazardFilter from './FloodHazardFilter'
+import LocationCityIcon from '@mui/icons-material/LocationCity'
+import FloodIcon from '@mui/icons-material/Flood'
 
 const floodLevels = [
     {
@@ -40,7 +43,6 @@ function FloodFilter({
     changeFilters,
     setAlert,
 }) {
-    const [value, setValue] = useState(opacity)
     const [showFloodTemp, setShowFloodTemp] = useState(showFlood)
     const [loading, setLoading] = useState(false)
 
@@ -57,10 +59,23 @@ function FloodFilter({
 
     return (
         <div>
+            <div
+                className={`mx-3 mt-1 mb-2 ${showFlood === 'hide' && 'd-none'}`}
+            >
+                <FilterSwitch
+                    label='Flood Hazard Risk Boundary'
+                    checked={filters.showBoundries}
+                    onChange={(checked) => {
+                        changeFilters(checked, 'showBoundries')
+                    }}
+                    icon={<ShowChartTwoToneIcon />}
+                />
+            </div>
+
             <TextField
                 id='outlined-select-currency'
                 select
-                label='Flood Risk Liklihood'
+                label='Flood Risk Probability'
                 value={showFloodTemp}
                 fullWidth
                 className='my-2'
@@ -83,37 +98,72 @@ function FloodFilter({
                 ))}
             </TextField>
 
-            <div className={`mx-3 mt-1 ${showFlood === 'hide' && 'd-none'}`}>
-                <FilterSwitch
-                    label='Boundries'
-                    checked={filters.showBoundries}
-                    onChange={(checked) => {
-                        changeFilters(checked, 'showBoundries')
-                    }}
-                    icon={<ShowChartTwoToneIcon />}
-                />
-            </div>
-            <div className='d-flex align-items-center'>
-                <p className='mb-0 me-3' style={{ width: 20 }}>
-                    {value}
-                </p>
-                <FloodOpacitySlider value={value} setValue={setValue} />
-                <div className='ms-3'>
-                    <Button
-                        variant='contained'
-                        color='primary'
-                        onClick={() => {
-                            changeFilters(true, 'changeFlood')
-                            setOpacity(value)
+            {/* <FloodHazardFilter /> */}
+
+            <div
+                className='border p-2 mb-2'
+                style={{
+                    borderRadius: 10,
+                }}
+            >
+                <div className='ps-2'>
+                    <FilterSwitch
+                        label='Flood Depths'
+                        checked={filters.showFloodDepth}
+                        onChange={(checked) => {
+                            changeFilters(checked, 'showFloodDepth')
                         }}
-                        disabled={filters.changeFlood}
-                    >
-                        Change
-                    </Button>
+                        icon={<FloodIcon />}
+                    />
                 </div>
+                {filters.showFloodDepth && (
+                    <FloodOpacitySlider
+                        changeFilters={changeFilters}
+                        opacity={opacity}
+                        setOpacity={setOpacity}
+                        filters={filters}
+                        text='Transparency'
+                        name='flood'
+                    />
+                )}
             </div>
-            <div className='mx-3'>
-                <FilterSwitch
+
+            <div
+                className='border p-2 mb-2'
+                style={{
+                    borderRadius: 10,
+                }}
+            >
+                <div className='ps-2'>
+                    <FilterSwitch
+                        label='Potentially Affected Buildings'
+                        checked={filters.showFloodAffectedBuildings}
+                        onChange={(checked) => {
+                            changeFilters(checked, 'showFloodAffectedBuildings')
+                        }}
+                        icon={<LocationCityIcon />}
+                    />
+                </div>
+                {filters.showFloodAffectedBuildings && (
+                    <FloodOpacitySlider
+                        changeFilters={changeFilters}
+                        opacity={opacity}
+                        setOpacity={setOpacity}
+                        filters={filters}
+                        text='Transparency'
+                        name='building'
+                    />
+                )}
+            </div>
+        </div>
+    )
+}
+
+export default FloodFilter
+
+{
+    /* <div className='mx-3 mt-3 mb-3'> 
+ <FilterSwitch
                     label='Population'
                     checked={filters.showPopulation}
                     onChange={(checked) => {
@@ -136,18 +186,6 @@ function FloodFilter({
                         changeFilters(checked, 'showBufferZoneAB')
                     }}
                     // icon={<GroupsTwoToneIcon />}
-                />
-                <FilterSwitch
-                    label='Flood affected buildings'
-                    checked={filters.showFloodAffectedBuildings}
-                    onChange={(checked) => {
-                        changeFilters(checked, 'showFloodAffectedBuildings')
-                    }}
-                    // icon={<GroupsTwoToneIcon />}
-                />
-            </div>
-        </div>
-    )
+                /> */
 }
-
-export default FloodFilter
+// </div>

@@ -31,7 +31,7 @@ const Filters = ({
                 zIndex: 1000,
                 top: isMobile ? 'auto' : 10,
                 bottom: isMobile ? 30 : 'auto',
-                width: isMobile ? '100%' : 380,
+                width: isMobile ? '100%' : 420,
                 // backgroundColor: 'white',
             }}
         >

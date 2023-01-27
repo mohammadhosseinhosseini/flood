@@ -21,7 +21,7 @@ import Schools from './Shelters/Schools'
 import UserPosition from './position/UserPosition'
 import Libraries from './Shelters/Libraries'
 import Buildings from './Shelters/Buildings'
-import { BuildingsBuffer } from './buildings/BuildingsBuffer'
+import BuildingsBuffer from './buildings/BuildingsBuffer'
 import FireBuildings from './Shelters/FireBuildings'
 
 const center = [51.9607, 7.6261]
@@ -52,6 +52,7 @@ function Map({
                     backgroundColor: 'gray',
                     // marginTop: '8px',
                     marginBottom: '9px',
+                    zIndex: 10,
                 }}
             >
                 <TileLayer
@@ -87,13 +88,17 @@ function Map({
                                 filters={filters}
                             />
                         )}
+
+                        {/* <BuildingsBuffer
+                            filters={filters}
+                            changeFilters={changeFilters}
+                            showFlood={showFlood}
+                        /> */}
                     </>
                 )}
 
                 {filters.showPopulation && <Population />}
                 {filters.showFireStation && <FireBuildings />}
-
-                <BuildingsBuffer filters={filters} />
 
                 <UserPosition />
             </MapContainer>

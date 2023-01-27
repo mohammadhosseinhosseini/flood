@@ -1,22 +1,22 @@
 [
     {
-        "text": "Flood zone 0–0.5m",
+        "text": "0–0.5m",
         "image": "Legend-1.png"
     },
     {
-        "text": "Flood zone >0.5–1m",
+        "text": ">0.5–1m",
         "image": "Legend-2.png"
     },
     {
-        "text": "Flood zone >1–2m",
+        "text": ">1–2m",
         "image": "Legend-3.png"
     },
     {
-        "text": "Flood zone >2–4m",
+        "text": ">2–4m",
         "image": "Legend-4.png"
     },
     {
-        "text": "Flood zone >4m",
+        "text": ">4m",
         "image": "Legend-5.png"
     }
 ]

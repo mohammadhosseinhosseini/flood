@@ -64,7 +64,7 @@ const IOSSwitch = styled((props) => (
 
 export default function FilterSwitch({ label, checked, onChange, icon }) {
     return (
-        <FormGroup className='mb-2'>
+        <FormGroup className=''>
             <div className='d-flex align-items-center'>
                 <FormControlLabel
                     control={<IOSSwitch checked={checked} />}

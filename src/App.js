@@ -9,13 +9,17 @@ import axios from 'axios'
 import PopupAlert from './components/alert/PopupAlert'
 import Filters from './components/filters/Filters'
 import { useWindowSize } from '@react-hook/window-size'
+import About from './components/help/About'
 
 function App() {
     const [width, height] = useWindowSize()
     const isMobile = width < 900
     const [year, setYear] = useState(parseInt(new Date().getFullYear()))
     const [showFlood, setShowFlood] = useState('low')
-    const [opacity, setOpacity] = useState(1)
+    const [opacity, setOpacity] = useState({
+        flood: 0.8,
+        building: 0.8,
+    })
     const [depth, setDepth] = useState({
         low: null,
         medium: null,
@@ -45,6 +49,8 @@ function App() {
         changeFlood: false,
         showBoundries: true,
         loading: true,
+        showAbout: false,
+        showFloodDepth: true,
     })
 
     useEffect(() => {
@@ -185,6 +191,7 @@ function App() {
                         showHelpModal: !filters.showHelpModal,
                     })
                 }}
+                changeFilters={changeFilters}
             />
             <div style={{ position: 'relative' }}>
                 <Map
@@ -217,6 +224,7 @@ function App() {
                     show={filters.showHelpModal}
                 />
                 <PopupAlert handleClose={closeAlert} alert={alert} />
+                <About filters={filters} changeFilters={changeFilters} />
             </div>
         </>
     )

@@ -12,7 +12,7 @@ import FireTruckIcon from '@mui/icons-material/FireTruck'
 function ShelterFilters({ filters, changeFilters, setFilters }) {
     return (
         <div>
-            <h4>Shelter Filters</h4>
+            <h4>Facilities of Interest</h4>
             <div className='mb-3 d-flex justify-content-between'>
                 <div className=''>
                     <Button
@@ -80,6 +80,7 @@ function ShelterFilters({ filters, changeFilters, setFilters }) {
                     }
                     icon={<FireTruckIcon />}
                 />
+                <div className='mb-2'></div>
                 <FilterSwitch
                     label='Schools'
                     checked={filters.showSchools}
@@ -88,6 +89,8 @@ function ShelterFilters({ filters, changeFilters, setFilters }) {
                     }
                     icon={<SchoolTwoToneIcon />}
                 />
+                <div className='mb-2'></div>
+
                 <FilterSwitch
                     label='Libraries'
                     checked={filters.showLibraries}
@@ -96,12 +99,16 @@ function ShelterFilters({ filters, changeFilters, setFilters }) {
                     }
                     icon={<ClassTwoToneIcon />}
                 />
+                <div className='mb-2'></div>
+
                 <FilterSwitch
                     label='Hotels'
                     checked={filters.showHotels}
                     onChange={(checked) => changeFilters(checked, 'showHotels')}
                     icon={<HotelTwoToneIcon />}
                 />
+                <div className='mb-2'></div>
+
                 <FilterSwitch
                     label='Hospitals'
                     checked={filters.showHospitals}

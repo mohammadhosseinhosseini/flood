@@ -1,15 +1,14 @@
 import React, { useEffect, useState } from 'react'
-import { GeoJSON } from 'react-leaflet'
-import axios from 'axios'
-import { getApiUrl } from '../../../helper/helper'
+import { GeoJSON, Pane } from 'react-leaflet'
 import floodHazard from '../../../data/Flood_hazard_Low.json'
-// import depth from '../../../data/Flood_Depths_Normalized_Low.json'
+import flood_buildings from '../../../data/flood_buildings/Flooded_Buildings_Low_Clipped.json'
+import Buildings from './Buildings'
 
 function FloodLow({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: opacity,
+            opacity: opacity.flood,
             color: 'red',
             weight: 3,
         })
@@ -38,19 +37,40 @@ function FloodLow({ opacity, depth, filters }) {
         } else {
             layer.setStyle({
                 fillColor: fillColor,
-                fillOpacity: opacity,
+                fillOpacity: opacity.flood,
                 weight: 0,
             })
         }
     }
 
-    if (depth === null || opacity === 0) return null
+    if (depth === null || opacity.flood === 0) return null
 
     return (
         <div>
-            <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
             {filters.showBoundries && (
-                <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+                <Pane
+                    name='top'
+                    style={{
+                        zIndex: 400,
+                    }}
+                >
+                    <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+                </Pane>
+            )}
+
+            {filters.showFloodAffectedBuildings && (
+                <Buildings data={flood_buildings} opacity={opacity.building} />
+            )}
+
+            {filters.showFloodDepth && (
+                <Pane
+                    name='middle'
+                    style={{
+                        zIndex: 398,
+                    }}
+                >
+                    <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
+                </Pane>
             )}
         </div>
     )

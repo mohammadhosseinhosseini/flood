@@ -1,0 +1,14 @@
+[
+    {
+        "text": "Low",
+        "color": "red"
+    },
+    {
+        "text": "Medium",
+        "color": "orange"
+    },
+    {
+        "text": "High",
+        "color": "#fce405"
+    }
+]

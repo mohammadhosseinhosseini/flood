@@ -38,7 +38,7 @@ export default function Header({ toggleShowHelp, changeFilters }) {
                         // size='small'
                         style={{ color: 'white' }}
                     >
-                        Show
+                        About
                     </Button>
                     <IconButton
                         onClick={toggleShowHelp}

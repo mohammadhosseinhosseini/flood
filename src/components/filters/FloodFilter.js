@@ -101,7 +101,9 @@ function FloodFilter({
             {/* <FloodHazardFilter /> */}
 
             <div
-                className='border p-2 mb-2'
+                className={`border p-2 mb-2 ${
+                    showFlood === 'hide' && 'd-none'
+                }`}
                 style={{
                     borderRadius: 10,
                 }}
@@ -129,7 +131,9 @@ function FloodFilter({
             </div>
 
             <div
-                className='border p-2 mb-2'
+                className={`border p-2 mb-2 ${
+                    showFlood === 'hide' && 'd-none'
+                }`}
                 style={{
                     borderRadius: 10,
                 }}

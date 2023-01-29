@@ -8,7 +8,7 @@ function FloodLow({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: opacity.flood,
+            opacity: 1,
             color: 'red',
             weight: 3,
         })
@@ -51,7 +51,7 @@ function FloodLow({ opacity, depth, filters }) {
                 <Pane
                     name='top'
                     style={{
-                        zIndex: 400,
+                        zIndex: 399,
                     }}
                 >
                     <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />

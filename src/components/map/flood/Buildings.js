@@ -4,16 +4,24 @@ import * as ReactDOMServer from 'react-dom/server'
 
 const Buildings = ({ data, opacity }) => {
     const onEachFeatureBuildings = (feature, layer) => {
+        // fix issue of popover not showing up on top of other layers
+        //
+        // https://stackoverflow.com/questions/57870193/react-leaflet-popup-not-showing-up-on-top-of-other-layers
+        //
+        //
+        // https://stackoverflow.com/questions/57870193/react-leaflet-popup-not-showing-up-on-top-of-other-layers
+
         const popupContent = ReactDOMServer.renderToString(
-            <div style={{ zIndex: 400 }}>
-                <p style={{ fontSize: 14 }}>
-                    {feature.properties.NAME}
-                    <br />
-                    {feature.properties.STR_NAME}
-                </p>
+            <div>
+                <p style={{ fontSize: 14 }}>{feature.properties.funktion}</p>
             </div>
         )
-        layer.bindPopup(popupContent)
+        layer.bindPopup(popupContent, {
+            className: 'popup',
+            offset: [0, -10],
+            closeButton: true,
+            maxWidth: 100,
+        })
 
         layer.setStyle({
             fillOpacity: opacity,
@@ -28,7 +36,7 @@ const Buildings = ({ data, opacity }) => {
         <Pane
             name='bottom'
             style={{
-                zIndex: 399,
+                zIndex: 400,
             }}
         >
             <GeoJSON data={data} onEachFeature={onEachFeatureBuildings} />

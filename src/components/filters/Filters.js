@@ -77,7 +77,7 @@ const Filters = ({
                     <div
                         className='p-3'
                         style={{
-                            maxHeight: isMobile ? height - 100 : 'auto',
+                            maxHeight: isMobile ? height - 160 : height - 200,
                             overflow: isMobile ? 'scroll' : 'auto',
                             display: filters.showFilters ? 'block' : 'none',
                         }}

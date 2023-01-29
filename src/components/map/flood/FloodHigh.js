@@ -1,7 +1,7 @@
 import React from 'react'
 import { GeoJSON, Pane } from 'react-leaflet'
 
-import floodHazard from '../../../data/Flood_hazard_High.json'
+import floodHazardBoundry from '../../../data/Flood_hazard_High.json'
 import flood_buildings from '../../../data/flood_buildings/Flooded_Buildings_Clipped_High.json'
 import Buildings from './Buildings'
 
@@ -9,7 +9,7 @@ function FloodHigh({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: opacity.flood,
+            opacity: 1,
             color: '#fce405',
             weight: 3,
         })
@@ -66,13 +66,12 @@ function FloodHigh({ opacity, depth, filters }) {
                 <Pane
                     name='top'
                     style={{
-                        zIndex: 10002,
+                        zIndex: 400,
                     }}
                 >
                     <GeoJSON
-                        data={floodHazard}
+                        data={floodHazardBoundry}
                         onEachFeature={onEachFeature}
-                        opacity={opacity.building}
                     />
                 </Pane>
             )}
@@ -83,7 +82,7 @@ function FloodHigh({ opacity, depth, filters }) {
                 <Pane
                     name='middle'
                     style={{
-                        zIndex: 10000,
+                        zIndex: 398,
                     }}
                 >
                     <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />

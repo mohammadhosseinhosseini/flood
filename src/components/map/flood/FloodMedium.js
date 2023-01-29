@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import { GeoJSON, Pane } from 'react-leaflet'
 
-import floodHazard from '../../../data/Flood_hazard_Medium.json'
+import floodHazardBoundry from '../../../data/Flood_hazard_Medium.json'
 import Buildings from './Buildings'
 import flood_buildings from '../../../data/flood_buildings/Flooded_Buildings_Clipped_Medium.json'
 
@@ -9,7 +9,7 @@ function FloodMedium({ opacity, depth, filters }) {
     const onEachFeature = (feature, layer) => {
         layer.setStyle({
             fillOpacity: 0,
-            opacity: opacity.flood,
+            opacity: 1,
             color: 'orange',
             weight: 3,
         })
@@ -67,24 +67,27 @@ function FloodMedium({ opacity, depth, filters }) {
                 <Pane
                     name='top'
                     style={{
-                        zIndex: 10002,
+                        zIndex: 400,
                     }}
                 >
-                    <GeoJSON data={floodHazard} onEachFeature={onEachFeature} />
+                    <GeoJSON
+                        data={floodHazardBoundry}
+                        onEachFeature={onEachFeature}
+                    />
                 </Pane>
+            )}
+            {filters.showFloodAffectedBuildings && (
+                <Buildings data={flood_buildings} opacity={opacity.building} />
             )}
             {filters.showFloodDepth && (
                 <Pane
                     name='middle'
                     style={{
-                        zIndex: 10000,
+                        zIndex: 398,
                     }}
                 >
                     <GeoJSON data={depth} onEachFeature={onEachFeatureDepth} />
                 </Pane>
-            )}
-            {filters.showFloodAffectedBuildings && (
-                <Buildings data={flood_buildings} opacity={opacity.building} />
             )}
         </div>
     )

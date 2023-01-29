@@ -1,22 +1,30 @@
 import React from 'react'
 import { Modal, Typography, Box } from '@mui/material'
+import { useWindowSize } from '@react-hook/window-size'
+
+import Flooded_Street_2014_Flood from './images/Flooded Street 2014 Flood.png'
+import Flooded_Cellar_Muenster from './images/Flooded Cellar Muenster.png'
+import Screen_Shot from './images/Screen Shot 2023-01-28 at 9.41.21 PM.png'
+import Flood_Depths_About_Page_Image from './images/Flood Depths About Page Image.png'
+import Potentially_Affected_Buildings_Legend_Photo from './images/Potentially Affected Buildings Legend Photo.png'
 
 const style = {
     position: 'absolute',
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    width: '80%',
     bgcolor: 'background.paper',
     border: '2px solid #000',
     boxShadow: 24,
-    p: 8,
     height: '80%',
     overflow: 'hidden',
     overflowY: 'scroll',
 }
 
 const About = ({ filters, changeFilters }) => {
+    const [width, height] = useWindowSize()
+    const isMobile = width < 900
+
     const handleClose = () => {
         changeFilters(false, 'showAbout')
     }
@@ -30,152 +38,338 @@ const About = ({ filters, changeFilters }) => {
                     aria-describedby='modal-modal-description'
                     style={{}}
                 >
-                    <Box sx={style}>
+                    <Box
+                        sx={{
+                            ...style,
+                            ...{
+                                padding: isMobile ? '10px 20px' : '30px 40px',
+                                width: isMobile ? '90%' : '75%',
+                            },
+                        }}
+                    >
+                        <h1 style={{ fontSize: '32px' }}>
+                            The Münster Flood Mapping Project
+                        </h1>
+
                         <p>
-                            Lorem ipsum dolor sit amet consectetur adipisicing
-                            elit. Voluptatem eos similique eum voluptates
-                            mollitia porro sunt ut praesentium quidem expedita
-                            commodi excepturi, sit molestiae labore totam
-                            ducimus soluta quibusdam placeat. Delectus,
-                            asperiores. Nam, saepe commodi laborum asperiores
-                            ipsum mollitia debitis eos aliquam beatae alias
-                            inventore blanditiis aspernatur eum sunt in eius
-                            fugit corrupti aperiam doloremque minima numquam ut
-                            deleniti! Sapiente nisi iusto modi officia esse odit
-                            facere, debitis repellendus? Earum, quidem! Ut
-                            nostrum, iste aspernatur labore, repellat eos vitae
-                            quia magnam rerum maxime sunt perspiciatis
-                            reprehenderit quo earum, accusantium sapiente qui
-                            veniam a. Debitis, a? Reiciendis ex cum provident
-                            nesciunt tenetur quasi, eius quisquam fuga earum
-                            nisi. Excepturi cum itaque nobis, ullam sint dolor
-                            accusantium exercitationem assumenda adipisci,
-                            corporis possimus quis! Qui optio dolore doloremque
-                            adipisci. Vel similique quibusdam iste ex at officia
-                            ab vitae blanditiis odio facilis voluptates animi,
-                            doloribus nulla distinctio inventore quia quas?
-                            Tempore eaque molestiae veritatis obcaecati ratione
-                            laudantium explicabo nulla, itaque dolorem minus
-                            soluta atque animi voluptatibus eius modi reiciendis
-                            non at officiis necessitatibus voluptas. Officiis
-                            quam ea, incidunt fugit error ipsum beatae minus
-                            quas consequuntur accusantium temporibus eaque,
-                            pariatur natus asperiores minima odio iusto iure
-                            vero voluptatem ut sed aliquid fugiat. Odio
-                            voluptates, rerum explicabo qui nobis iste totam
-                            tempora, consectetur labore omnis maxime inventore
-                            ullam similique recusandae, veritatis molestiae
-                            voluptatum repudiandae porro corrupti ducimus. Optio
-                            officiis esse quasi sapiente commodi, quisquam eaque
-                            exercitationem earum. Enim excepturi consequuntur
-                            eaque quaerat quos, culpa pariatur! Incidunt aliquid
-                            adipisci aspernatur voluptatum totam assumenda?
-                            Vitae quasi molestias illo et fuga! Consectetur
-                            laudantium numquam itaque ullam hic. Voluptatem,
-                            culpa. Unde, impedit ratione autem beatae sapiente
-                            quibusdam! Enim, consequatur cum! Quam voluptates et
-                            non ut eveniet quasi error aspernatur, sapiente
-                            molestias minima rerum iste voluptas iusto neque
-                            voluptatibus iure omnis doloribus. Voluptates
-                            quibusdam voluptatum sapiente nobis sit debitis
-                            veniam, nesciunt enim architecto repudiandae
-                            dignissimos molestias deserunt. Esse facilis, ut
-                            culpa debitis reiciendis ipsum quam quia, iure quae
-                            saepe impedit voluptatum minima animi explicabo
-                            harum. Dicta et libero natus distinctio eveniet!
-                            Iusto, doloremque corrupti asperiores cupiditate
-                            ducimus dolore assumenda atque praesentium vitae,
-                            tenetur omnis. Animi veritatis, dolor rerum saepe,
-                            mollitia hic repudiandae sit facilis consequuntur
-                            nulla ipsa similique debitis ratione fugiat cum
-                            aperiam esse nemo suscipit? Qui sit, magni tenetur
-                            ratione optio ullam adipisci dicta cum illum sed
-                            labore earum maxime laboriosam ex similique est
-                            saepe non dolor soluta quod? Officiis dolorum,
-                            maiores sapiente quis neque rerum eaque odit quidem
-                            mollitia soluta, totam repellat! Quidem tempore id
-                            magnam, architecto pariatur deleniti. Magnam
-                            molestiae necessitatibus expedita sapiente.
-                            Excepturi ipsam optio natus suscipit eum ullam
-                            maiores error sed quae corporis? Tempora,
-                            perferendis recusandae optio labore velit rerum
-                            debitis, porro quaerat odio illum dolorem assumenda.
-                            Fuga quae iste eligendi explicabo eaque recusandae
-                            modi nemo numquam nostrum cumque ullam dolores
-                            aspernatur, ad dolore, voluptatem saepe natus ipsa
-                            rerum exercitationem, minima labore temporibus velit
-                            nesciunt omnis. Vero ea harum perferendis pariatur
-                            atque optio nihil! Saepe rem quod, dolorum beatae
-                            harum assumenda natus officia corrupti veritatis
-                            unde eveniet maxime nostrum perspiciatis ratione
-                            pariatur sit soluta consectetur non eius, nam optio
-                            error et. Earum, est quos. Distinctio blanditiis
-                            magnam, consectetur ipsa dolorem perspiciatis
-                            quibusdam praesentium dolor sint repellat architecto
-                            accusantium sequi placeat iure. Ad perspiciatis
-                            veritatis doloribus consequuntur porro quod rem quia
-                            nesciunt temporibus provident officia maiores quasi
-                            nisi perferendis esse adipisci eaque, a, optio,
-                            quidem delectus. Dicta, modi! Aliquid impedit
-                            architecto quo tempora numquam fugiat cumque aperiam
-                            eaque natus obcaecati, atque, voluptas adipisci sed
-                            eveniet labore non quaerat error? Deserunt facilis
-                            earum laborum nulla sunt! Harum laudantium eaque,
-                            consequuntur beatae magni id fuga, vel, quae
-                            repellat expedita dignissimos nostrum minima soluta
-                            vero blanditiis atque voluptatibus sed saepe non
-                            accusamus aliquid maiores quibusdam quod! Eius,
-                            optio ex. Fugiat, atque amet quos similique
-                            temporibus labore culpa quo obcaecati modi eaque
-                            sequi soluta enim omnis cupiditate dolor, illo optio
-                            dolores? Laboriosam adipisci quos repellat
-                            voluptatibus fugit natus expedita, sunt quibusdam
-                            nisi consectetur iure. Amet nostrum quaerat maxime
-                            quidem, quae assumenda blanditiis eveniet cupiditate
-                            eum hic doloremque vitae unde similique modi esse!
-                            Rem nulla hic, qui illo dolor quis sed, blanditiis
-                            eos quae minima ullam nihil voluptate delectus
-                            quisquam corrupti numquam a. Assumenda asperiores
-                            vero veritatis inventore culpa unde doloremque,
-                            repellendus dignissimos commodi adipisci autem?
-                            Corrupti harum doloribus molestiae inventore
-                            dolorem! Architecto, fuga numquam inventore vero
-                            totam eligendi esse saepe corrupti minus quasi,
-                            corporis at sequi deleniti cum ducimus debitis, odit
-                            error laboriosam aut a et accusamus eaque.
-                            Perferendis omnis sunt ipsum expedita magnam,
-                            obcaecati quasi itaque ipsa officia inventore
-                            dignissimos ad voluptas quam reiciendis!
-                            Perspiciatis non corporis rem magnam iure delectus
-                            debitis optio facere nostrum. Similique eum aliquid
-                            minus vel distinctio autem sint corporis totam
-                            suscipit doloremque, itaque corrupti quis nobis
-                            voluptates ratione nulla esse nisi et, nemo quasi
-                            repellendus ullam. Voluptate ad deserunt sapiente?
-                            Neque, nihil obcaecati aspernatur facere architecto
-                            odit vitae maxime impedit eius at deleniti eaque
-                            consequuntur est reiciendis aperiam. Accusamus
-                            veniam quasi maxime officiis et? Consequatur
-                            praesentium debitis dicta ut quam, neque aspernatur
-                            repellendus at, accusantium, fugiat eos asperiores
-                            amet eius ducimus aut corporis ab exercitationem
-                            pariatur velit odit! Sint aliquid praesentium
-                            provident quisquam aspernatur velit quas tempora,
-                            inventore dicta dignissimos similique ex repellat
-                            ratione architecto pariatur id ab unde rem obcaecati
-                            facilis quibusdam est ut sapiente? Optio corporis
-                            dignissimos nisi dolorem consequuntur eos dolor
-                            distinctio sapiente magnam minus saepe ullam
-                            suscipit, ea similique ducimus, tempore consectetur
-                            vel minima recusandae est. Soluta obcaecati nam
-                            harum, repellendus nisi facere quibusdam facilis
-                            ipsa quasi delectus in sunt non voluptatibus porro
-                            voluptates tempore iste sequi ratione. Quod tenetur
-                            aspernatur atque veritatis, quos architecto nihil
-                            aliquid reiciendis, dolore nisi ab natus at rerum
-                            vel non, saepe dignissimos autem? Saepe eaque
-                            dignissimos laboriosam rerum aspernatur! Aut itaque
-                            ullam. Id, voluptates.
+                            <h2 style={{ fontSize: '24px' }}> Introduction </h2>
+
+                            <Box>
+                                <p style={{ margin: 0 }}>
+                                    {' '}
+                                    <p>
+                                        On 28 July, 2014, the city of Münster
+                                        experienced a severe storm that resulted
+                                        in widespread flooding, causing the
+                                        death of two individuals and
+                                        overwhelming emergency services. The
+                                        flood posed numerous challenges, and
+                                        demonstrated the importance of flood
+                                        risk awareness and preparedness as a
+                                        tool for keeping citizens safe during
+                                        future flood events.
+                                    </p>
+                                    <p>
+                                        During the storm, the fire brigade
+                                        received over 13,000 calls for service,
+                                        but only 15 percent of those calls were
+                                        answered due to the severity of the
+                                        flood. The city's sewer and drainage
+                                        systems were quickly overwhelmed and
+                                        flooded the streets, making it dangerous
+                                        for emergency responders and civilians
+                                        to travel. At one point, the mobile
+                                        phone network collapsed, making it
+                                        difficult for people to call for help.
+                                    </p>
+                                    <div
+                                        style={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'left',
+                                        }}
+                                    >
+                                        <img
+                                            src={Flooded_Street_2014_Flood}
+                                            style={{
+                                                width: '40%',
+                                                height: 'auto',
+                                                objectFit: 'contain',
+                                                border: '2px solid gray',
+                                                borderRadius: '5px',
+                                            }}
+                                        />
+                                        <p
+                                            style={{
+                                                marginTop: '10px',
+                                                fontWeight: 'bold',
+                                                width: '40%',
+                                                textAlign: 'center',
+                                            }}
+                                        >
+                                            {' '}
+                                            Flooded streets resulted in
+                                            dangerous travel conditions{' '}
+                                        </p>
+                                    </div>
+                                    <p>
+                                        For those who sought refuge at home, the
+                                        flood still posed a huge safety risk.
+                                        Thousands of cellars flooded, and a 76
+                                        year-old man tragically passed away from
+                                        drowning at home. Several people were
+                                        also reported missing. The fire brigade
+                                        was not adequately staffed to handle the
+                                        situation, even with the assistance of
+                                        volunteer firefighters, disaster relief,
+                                        Technical Aid, helpers, and auxiliary
+                                        workers.
+                                    </p>
+                                    <div
+                                        style={{
+                                            display: 'flex',
+                                            flexDirection: 'column',
+                                            alignItems: 'left',
+                                        }}
+                                    >
+                                        <img
+                                            src={Flooded_Cellar_Muenster}
+                                            style={{
+                                                width: '40%',
+                                                height: 'auto',
+                                                objectFit: 'contain',
+                                                border: '2px solid gray',
+                                                borderRadius: '5px',
+                                            }}
+                                        />
+                                        <p
+                                            style={{
+                                                marginTop: '10px',
+                                                fontWeight: 'bold',
+                                                width: '40%',
+                                                textAlign: 'center',
+                                            }}
+                                        >
+                                            {' '}
+                                            Flooded cellars pose a significant
+                                            safety risk{' '}
+                                        </p>
+                                    </div>
+                                    <p>
+                                        The next day, thousands of cellars and
+                                        houses were reported to be underwater.
+                                        Public buildings such as schools and
+                                        government offices were also damaged in
+                                        the flood. To coordinate disaster relief
+                                        efforts, community members created
+                                        emergency assistance groups on social
+                                        media platforms (e.g., Facebook and
+                                        Twitter). Many volunteers worked
+                                        alongside the fire brigade to help pump
+                                        water out of buildings, clear drainage
+                                        systems, and remove bulky, damaged items
+                                        from homes.
+                                    </p>
+                                    <p>
+                                        Altough the flood was nearly a decade
+                                        ago, the extent of the disaster
+                                        demonstrates the importance of educating
+                                        citizens about flood risk, safety, and
+                                        ways to reduce the cost of damage after
+                                        a flood event. As such, we developed the
+                                        Münster Flood Mapping Project as a
+                                        user-friendly, publically accessible
+                                        tool to help achieve this goal. This
+                                        tool presents three potential flood
+                                        scenarios, and allows users to better
+                                        understand which areas are likely to
+                                        flood during a future flood event. We
+                                        use open-source flood data from the
+                                        Federal Institute of Hydrology's (BfG)
+                                        Geoportal, and aim to provide
+                                        community-specific knowledge by allowing
+                                        users to study flood risk at multiple
+                                        scales.
+                                    </p>
+                                </p>
+                            </Box>
+                        </p>
+
+                        <p>
+                            <h2 style={{ fontSize: '24px' }}>
+                                {' '}
+                                How to use this map:{' '}
+                            </h2>
+
+                            <Box>
+                                <p>
+                                    This map uses flood data prepared by the
+                                    Federal Insitute of Hydrology (BfG) to meet
+                                    the requirements of the 2007 EU Floods
+                                    Directive. Every six years, all EU countries
+                                    are required to create and update flood
+                                    hazard and flood risk maps in all areas
+                                    where significant flooding could take place.
+                                    This project uses data prepared for the
+                                    2016-2021 map cycle, and represents
+                                    potential flooding scenarios throughout
+                                    Münster. As a disclaimer, there is no
+                                    guarantee that a flood event will occur
+                                    within the given cycle.
+                                    <p>
+                                        Relevant terms and definitions for the
+                                        map are provided below.
+                                    </p>
+                                </p>
+                            </Box>
+                        </p>
+
+                        <p>
+                            <h2 style={{ fontSize: '24px' }}>
+                                Flood Hazard Scenarios{' '}
+                            </h2>
+                            <Box>
+                                <ul>
+                                    <li>
+                                        <b>High probability:</b> flooding occurs
+                                        every 10 to 20 years on average (e.g.,
+                                        relatively frequently){' '}
+                                    </li>
+                                    <li>
+                                        <b>Medium probability:</b> flood occurs
+                                        every 100 years on average{' '}
+                                    </li>
+                                    <li>
+                                        <b>Low probability:</b> flood occurs
+                                        less freqeuntly than every 100
+                                        years(e.g., rarely). Such floods are
+                                        known as "millennium floods", and can
+                                        result in catastrophic consequences if
+                                        not adequately addressed.{' '}
+                                    </li>
+                                </ul>
+                            </Box>
+                            <img
+                                src={Screen_Shot}
+                                alt='Flood Map'
+                                style={{
+                                    width: '30%',
+                                    height: 'auto',
+                                    objectFit: 'contain',
+                                    border: '2px solid gray',
+                                    borderRadius: '5px',
+                                    display: 'inline-block',
+                                }}
+                            />
+                            <p></p>
+
+                            <p>
+                                <h2 style={{ fontSize: '24px' }}>
+                                    Flood Depths{' '}
+                                </h2>
+                                <Box>
+                                    <p style={{ margin: 0 }}>
+                                        The blue-colored areas on the map
+                                        represent potential flood depths during
+                                        a low, medium, or high probability flood
+                                        event. Darker shades of blue correspond
+                                        to higher water depths.
+                                    </p>
+                                </Box>
+                                <p></p>
+                                <img
+                                    src={Flood_Depths_About_Page_Image}
+                                    alt='Flood Legend'
+                                    style={{
+                                        width: '30%',
+                                        height: 'auto',
+                                        objectFit: 'contain',
+                                        border: '2px solid gray',
+                                        borderRadius: '5px',
+                                        display: 'inline-block',
+                                    }}
+                                />
+                                <p></p>
+                            </p>
+
+                            <p>
+                                <h2 style={{ fontSize: '24px' }}>
+                                    {' '}
+                                    Potentially Affected Buildings{' '}
+                                </h2>
+                                <Box>
+                                    <p style={{ margin: 0 }}>
+                                        {' '}
+                                        This layer shows buildings that would
+                                        potentially be affected during a low,
+                                        medium, or high probability flood event.
+                                        Users can adjust the transparency of the
+                                        buildings to understand whether a
+                                        specific building or property would be
+                                        at-risk during a flood event.
+                                    </p>
+                                </Box>
+                                <p></p>
+                                <img
+                                    src={
+                                        Potentially_Affected_Buildings_Legend_Photo
+                                    }
+                                    alt='Flood Legend'
+                                    style={{
+                                        width: '30%',
+                                        height: 'auto',
+                                        objectFit: 'contain',
+                                        border: '2px solid gray',
+                                        borderRadius: '5px',
+                                        display: 'inline-block',
+                                    }}
+                                />
+                            </p>
+
+                            <h2 style={{ fontSize: '24px' }}> References </h2>
+                            <Box>
+                                <div>
+                                    <p>
+                                        Bundesanstalt für Gewässerkunde. (n.d.).
+                                        Geoportal der BfG. Geoportal der
+                                        Bundesanstalt für Gewässerkunde.
+                                        Retrieved January 29, 2023, from
+                                        <br />
+                                        <a href='https://geoportal.bafg.de/ggina-portal/'>
+                                            https://geoportal.bafg.de/ggina-portal/
+                                        </a>
+                                    </p>
+                                    <p>
+                                        European Commission. (n.d.). Floods.
+                                        European Commission. Retrieved January
+                                        29, 2023, from
+                                        <br />
+                                        <a href='https://environment.ec.europa.eu/topics/water/floods_en'>
+                                            https://environment.ec.europa.eu/topics/water/floods_en
+                                        </a>
+                                    </p>
+                                    <p>
+                                        Ministerium für Klimaschutz, Umwelt,
+                                        Landwirtschaft, Naturschutz und
+                                        Verbraucherschutz, Ref. IV.6. (n.d.).
+                                        Hochwassergefahrenkarten /
+                                        Hochwasserrisikokarten. Flussgebiete
+                                        NRW. Retrieved January 29, 2023, from
+                                        <br />
+                                        <a href='https://www.flussgebiete.nrw.de/en/system/files/atoms/files/lesehilfe_hwrmrl_hwgk_0.pdf'>
+                                            https://www.flussgebiete.nrw.de/en/system/files/atoms/files/lesehilfe_hwrmrl_hwgk_0.pdf
+                                        </a>
+                                    </p>
+                                    <p>
+                                        WDR. (2022). Heimatflimmern. Retrieved
+                                        January 29, 2023, from
+                                        <br />
+                                        <a href='https://www.youtube.com/watch?v=6YZdb0NIuDs.-Reading'>
+                                            https://www.youtube.com/watch?v=6YZdb0NIuDs.-Reading
+                                        </a>
+                                    </p>
+                                </div>
+                            </Box>
                         </p>
                     </Box>
                 </Modal>

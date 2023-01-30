@@ -33,6 +33,10 @@ const InstallPWA = ({ android }) => {
         setModalOpen(false)
     }
 
+    if (window.matchMedia('(display-mode: standalone)').matches) {
+        return null
+    }
+
     return (
         <Modal
             open={modalOpen}

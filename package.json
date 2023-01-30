@@ -14,6 +14,9 @@
     "@testing-library/user-event": "^13.2.1",
     "axios": "^1.2.2",
     "bootstrap": "^5.2.3",
+    "deepl": "^1.0.13",
+    "free-translate": "^0.6.1",
+    "google-translate-api": "^2.3.0",
     "leaflet": "^1.9.3",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
@@ -27,7 +30,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "translate": "nodemon ./src/data/translator.js"
   },
   "eslintConfig": {
     "extends": [

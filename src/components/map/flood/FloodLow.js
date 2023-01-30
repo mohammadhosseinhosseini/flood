@@ -16,15 +16,30 @@ function FloodLow({ opacity, depth, filters }) {
 
     const onEachFeatureDepth = (feature, layer) => {
         var fillColor = 'blue'
-        if (feature.properties.T_class === '11') {
+        if (
+            feature.properties.T_class === '11' ||
+            feature.properties.T_class === '31'
+        ) {
             fillColor = '#d3e1fe'
-        } else if (feature.properties.T_class === '12') {
+        } else if (
+            feature.properties.T_class === '12' ||
+            feature.properties.T_class === '32'
+        ) {
             fillColor = '#769fff'
-        } else if (feature.properties.T_class === '13') {
+        } else if (
+            feature.properties.T_class === '13' ||
+            feature.properties.T_class === '33'
+        ) {
             fillColor = '#5680ef'
-        } else if (feature.properties.T_class === '14') {
+        } else if (
+            feature.properties.T_class === '14' ||
+            feature.properties.T_class === '34'
+        ) {
             fillColor = '#3561df'
-        } else if (feature.properties.T_class === '15') {
+        } else if (
+            feature.properties.T_class === '15' ||
+            feature.properties.T_class === '35'
+        ) {
             fillColor = '#133bbf'
         }
 

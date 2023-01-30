@@ -10,6 +10,9 @@ import PopupAlert from './components/alert/PopupAlert'
 import Filters from './components/filters/Filters'
 import { useWindowSize } from '@react-hook/window-size'
 import About from './components/help/About'
+import useIsIOS from './components/ios/useIsIOS'
+import InstallPWA from './components/ios/InstallPWA'
+import { isAndroid, isIOS } from 'react-device-detect'
 
 function App() {
     const [width, height] = useWindowSize()
@@ -225,6 +228,8 @@ function App() {
                 />
                 <PopupAlert handleClose={closeAlert} alert={alert} />
                 <About filters={filters} changeFilters={changeFilters} />
+                {isIOS && <InstallPWA />}
+                {isAndroid && <InstallPWA android />}
             </div>
         </>
     )
